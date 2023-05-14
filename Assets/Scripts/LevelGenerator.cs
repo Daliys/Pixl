@@ -15,6 +15,7 @@ public class LevelGenerator : LevelBase
     private void StartGeneration()
     {
         List<Point> availableToTake = new List<Point>();
+            //List<Point> notToUsePoints = GetRandomPoints(6);
         List<Point> notToUsePoints = GetRandomPoints(6);
         
         Point startPoint = new Point(Random.Range(0, gridSize.x), Random.Range(0, gridSize.y));

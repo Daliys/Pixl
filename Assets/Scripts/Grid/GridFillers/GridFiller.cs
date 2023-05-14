@@ -1,4 +1,6 @@
+using Grid.GridData;
 using Grid.GridItems;
+using UI;
 using UnityEngine;
 
 namespace Grid.GridFillers
@@ -11,15 +13,15 @@ namespace Grid.GridFillers
     
         protected Point gridSize;
         protected GridItem[,] gridItems;
-        protected UIController uiController;
-        
-        public delegate GridItemUpdateData.GridItemUpdateData CellDataForUpdate(Point point);
-    
-        public void Initialize(Point gridSize, UIController uiController )
+        protected AbstractUILevel uiLevel;
+
+        public delegate GridItemData GridItemDataForUpdate(Point point);
+ 
+        public void Initialize(Point gridSize, AbstractUILevel uiLevel)
         {
             this.gridSize = gridSize;
             gridItems = new GridItem[gridSize.x, gridSize.y];
-            this.uiController = uiController;
+            this.uiLevel = uiLevel;
             SpawnGridItems();
         }
     
@@ -39,17 +41,29 @@ namespace Grid.GridFillers
 
         protected abstract void InitializeGridItem(GridItem gridItem, Point point);
 
-        protected void UpdateGridBy(CellDataForUpdate cellDataForUpdate)
+        protected void UpdateGridBy(GridItemDataForUpdate gridItemDataForUpdate)
         {
             for (int y = 0; y < gridSize.y; y++)
             {
                 for (int x = 0; x < gridSize.x; x++)
                 {
-                    gridItems[x,y].UpdateCellStatus(cellDataForUpdate(gridItems[x,y].Point));
+                    gridItems[x,y].UpdateCellData(gridItemDataForUpdate(gridItems[x,y].Point));
                 }
             }
         }
-
+        
+        protected void UpdateGridBy(GridItemData[,] data)
+        {
+            for (int y = 0; y < gridSize.y; y++)
+            {
+                for (int x = 0; x < gridSize.x; x++)
+                {
+                    gridItems[x,y].UpdateCellData(data[x,y]);
+                }
+            }
+        }
+        
+        public AbstractUILevel UILevel => uiLevel;
 
     }
 }

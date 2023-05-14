@@ -1,64 +1,46 @@
+using Data;
+using Grid.GridData;
+using Grid.GridFillers;
+using ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Grid.GridItems
 {
-    public class GridItem : MonoBehaviour
+    public abstract class GridItem : MonoBehaviour
     {
         [SerializeField] protected Point point;
-        protected Image image;
-    
-        [SerializeField] protected Sprite emptyImage;
-        [SerializeField] protected Sprite filledImage;
-        [SerializeField] protected Sprite selectedImage;
-    
-        protected PlayerLevel playerLevel;
+        [SerializeField] protected Image image;
+        [SerializeField] protected ImagesForGridItem images;
+        [SerializeField] protected float alphaValueForImage;
+        
+        protected GridFiller gridFiller;
+        protected GridItemData currentGridItemData;
 
-        public enum CellStatus
+        
+        public virtual void UpdateCellData(GridItemData gridItemData)
         {
-            SelectedByPlayer,
-            Empty,
-            Filled,
-            ResultCorrectSelected,
-            ResultWrongSelectedShouldBeFilled,
-            ResultWrongSelectedShouldBeEmpty
-        }
+            currentGridItemData = gridItemData;
+            var alpha = gridItemData.IsImageAlpha100 ? 1.0f : alphaValueForImage;
+            image.color = new Color(image.color.r, image.color.g, image.color.b, alpha);
 
-        protected CellStatus currentCellStatus;
-
-        protected virtual void Awake()
-        {
-            image = GetComponent<Image>();
-        }
-    
-
-        public virtual void UpdateCellStatus(GridItemUpdateData.GridItemUpdateData updateData)
-        {
-            currentCellStatus = updateData.cellStatus;
-
-            image.sprite = currentCellStatus switch
+            image.sprite = gridItemData.CellStatus switch
             {
-                CellStatus.SelectedByPlayer => selectedImage,
-                CellStatus.Empty => emptyImage,
-                CellStatus.Filled => filledImage,
-                CellStatus.ResultCorrectSelected => filledImage,
-                CellStatus.ResultWrongSelectedShouldBeFilled => selectedImage,
-                CellStatus.ResultWrongSelectedShouldBeEmpty => selectedImage,
+                CellStatus.Empty => images.emptyImage,
+                CellStatus.Filled => images.filledImage,
+                CellStatus.Selected => images.selectedImage,
+                CellStatus.Warning => images.warningImage,
                 _ => image.sprite
             };
         }
 
-        public void Initialize(Point point, PlayerLevel playerLevel = null)
+        public void Initialize(Point point, GridFiller gridFiller)
         {
             this.point = point;
-            this.playerLevel = playerLevel;
+            this.gridFiller = gridFiller;
         }
 
         public Point Point => point;
-
-  
-
-        public CellStatus CurrentCellStatus => currentCellStatus;
-
+        
     }
 }

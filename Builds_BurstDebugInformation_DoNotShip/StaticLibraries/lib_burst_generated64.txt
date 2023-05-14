@@ -142,6 +142,7 @@ Library: lib_burst_generated64
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.VisualScripting.Flow.dll
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.Mathematics.dll
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.Services.Core.Telemetry.dll
+--root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.VisualScripting.State.dll
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.VisualScripting.Core.dll
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.Services.Core.Environments.Internal.dll
@@ -152,7 +153,6 @@ Library: lib_burst_generated64
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.Services.Core.dll
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.Services.Core.Environments.dll
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.Services.Core.Internal.dll
---root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.Services.Core.Analytics.dll
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.2D.SpriteShape.Runtime.dll
 --root-assembly=/Users/daliys/Personal/UnityProjects/OkasanaPure/Temp/StagingArea/Data/Managed/Unity.Notifications.iOS.dll
