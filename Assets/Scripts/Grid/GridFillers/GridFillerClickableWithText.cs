@@ -22,14 +22,13 @@ namespace Grid.GridFillers
 
         public void UpdateGridByExplanationMistakeResultAnswer(GridItem gridItem)
         {
-   
             GridItemData[,] data = GetSolver().GetGridForResultExplanationPanel(gridItem.Point);
             UpdateGridBy(data);
         }
 
-        public void UpdateGridByPlayerGrid()
+        public void UpdateGridByPlayerGrid(PlayerLevel.PlayerLevel playerLevel)
         {
-            UpdateGridBy(GetPlayerLevel().GetPlayerDataForUpdateCell);
+            UpdateGridBy(playerLevel.GetGritItemDataAtPoint);
         }
 
         public void OnChildButtonClicked(GridItemClickable gridItem)
@@ -46,9 +45,14 @@ namespace Grid.GridFillers
                 }
             }
 
-            ((UILevel1)uiLevel).OnButtonItemClicked(gridItem);
+            uiLevel.OnButtonGridItemClicked(gridItem);
         }
-
+        
+        public void UpdateGridByCorrectSolvedGrid(LevelSolver.LevelSolver levelSolverLevel)
+        {
+            UpdateGridBy(levelSolverLevel.GetGridItemDataAtPoint);
+        }
+        
         public void UpdateSelectedGridItem(string text)
         {
             selectedGridItem.UpdateText(text);

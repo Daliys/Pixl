@@ -25,6 +25,21 @@ namespace PlayerLevel
             isResultCorrect = true;
         }
 
+        public override GridItemData GetGritItemDataAtPoint(Point point)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override bool IsGridFilledCorrect()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override GridItemData GetResultDataForUpdateCell(Point point)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void SaveIteration()
         {
             bool isSame = true ;

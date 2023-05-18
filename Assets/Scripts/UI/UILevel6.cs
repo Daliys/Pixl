@@ -1,4 +1,5 @@
 using Grid.GridFillers;
+using Grid.GridItems;
 using LevelSolver;
 using PlayerLevel;
 using TMPro;
@@ -18,9 +19,7 @@ namespace UI
         [SerializeField] private GameObject previousIterationPanel;
 
         [SerializeField] private GameObject timerAreaPanel;
-        
-        
-        
+
         public override void InitializeOnAwake()
         {
             levelGenerator = new LevelGenerator();
@@ -36,10 +35,15 @@ namespace UI
             gridFillerPreview.Initialize(gridSize, this);
             
             levelGenerator.Initialize(gridSize);
-            levelSolver.Initialize(levelGenerator.Grid);
+            levelSolver.Initialize(levelGenerator.Grid, this);
             ((PlayerLevel6)PlayerLevel).Initialize(levelGenerator.Grid, this);
 
             UpdateIterationNumber();
+
+        }
+
+        public override void OnButtonGridItemClicked(GridItem gridItem)
+        {
 
         }
 

@@ -1,3 +1,4 @@
+using Grid.GridItems;
 using UnityEngine;
 
 namespace UI
@@ -14,11 +15,13 @@ namespace UI
 
         public abstract void InitializeOnAwake();
 
+        public abstract void OnButtonGridItemClicked(GridItem gridItem);
+        
         public abstract void OnButtonCheckResultClicked();
 
         public abstract void OnButtonBackExplanationPanelClicked();
         
-        public LevelBase PlayerLevel => playerLevel;
+        public PlayerLevel.PlayerLevel PlayerLevel => playerLevel;
         public LevelGenerator LevelGenerator => levelGenerator;
         public LevelSolver.LevelSolver LevelSolver => levelSolver;
     }

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace Grid.GridItems
 {
-    public abstract class GridItem : MonoBehaviour
+    public class GridItem : MonoBehaviour
     {
         [SerializeField] protected Point point;
         [SerializeField] protected Image image;
@@ -30,6 +30,9 @@ namespace Grid.GridItems
                 CellStatus.Filled => images.filledImage,
                 CellStatus.Selected => images.selectedImage,
                 CellStatus.Warning => images.warningImage,
+                CellStatus.SelectedBlack => images.selectedBlack,
+                CellStatus.SelectedWhite => images.selectedWhite,
+                CellStatus.SelectedYellow => images.selectedYellow,
                 _ => image.sprite
             };
         }

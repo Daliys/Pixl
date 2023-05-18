@@ -1,22 +1,21 @@
 using Data;
 using Grid.GridData;
-using Grid.GridItems;
+using UI;
 
 namespace LevelSolver
 {
     public class LevelSolverLevel1 : LevelSolver
     {
 
-        public IrrationalNumber[,] gridValues;
+        protected IrrationalNumber[,] gridValues;
 
-        public override void Initialize(bool[,] startingGrid)
+        public override void Initialize(bool[,] startingGrid, AbstractUILevel uiLevel)
         {
-            base.Initialize(startingGrid);
+            base.Initialize(startingGrid, uiLevel);
             gridValues = new IrrationalNumber[gridSize.x, gridSize.y];
             StartSolving();
         }
-
-
+        
         protected override void StartSolving()
         {
             for (int i = 0; i < gridSize.x; i++)
@@ -24,18 +23,21 @@ namespace LevelSolver
                 for (int j = 0; j < gridSize.y; j++)
                 {
                     Point point = new Point(i, j);
-                    bool status = GetGridValue(point);
-
-                    Point nearPoint = GetNearOppositeCell(point, status);
-                    Point distPoint = point - nearPoint;
-                    gridValues[point.x, point.y] = new IrrationalNumber(distPoint, !status);
+                    Point nearPoint = GetNearOppositeCell(point, GetGridValue(point));
+                    SetDistanceAtGridValues(point, nearPoint);
                 }
             }
+        }
+
+        protected virtual void SetDistanceAtGridValues(Point settingPoint, Point nearPoint)
+        {
+            gridValues[settingPoint.x, settingPoint.y] = new IrrationalNumber(settingPoint - nearPoint, !GetGridValue(settingPoint));
         }
 
         private Point GetNearOppositeCell(Point originalPoint, bool initialValue)
         {
             Point lowestDistancePoint = null;
+            bool isCheckedNext = false;
 
             for (int wave = 1; wave < 8; wave++)
             {
@@ -60,15 +62,15 @@ namespace LevelSolver
 
                 if (lowestDistancePoint != null)
                 {
-                    return lowestDistancePoint;
+                    if (!isCheckedNext) isCheckedNext = true;
+                    else return lowestDistancePoint;
                 }
             }
 
             return null;
         }
 
-
-        private Point CompareAndGetLowestDistancePoint(Point pointToCheck, Point originalPoint,
+        protected virtual Point CompareAndGetLowestDistancePoint(Point pointToCheck, Point originalPoint,
             Point lowestDistancePoint, bool initValue)
         {
             if (IsPointInRange(pointToCheck) && GetGridValue(pointToCheck) == !initValue)
@@ -81,15 +83,13 @@ namespace LevelSolver
                 Point distLowest = originalPoint - lowestDistancePoint;
                 IrrationalNumber irLowest = new IrrationalNumber(distLowest);
 
-
                 return irCheck < irLowest ? pointToCheck : lowestDistancePoint;
-
             }
 
             return lowestDistancePoint;
         }
 
-        public GridItemButtonTextData[,] GetGridForResultExplanationPanel(Point point)
+        public override GridItemData[,] GetGridForResultExplanationPanel(Point point)
         {
             GridItemButtonTextData[,] gridItemUpdateData = new GridItemButtonTextData[gridSize.x, gridSize.y];
             Point nearOppositeCell = GetNearOppositeCell(point, grid[point.x, point.y]);
@@ -114,6 +114,7 @@ namespace LevelSolver
                 CellStatus = GetGridItemDataAtPoint(point).CellStatus, Text = GetGridValueAtPoint(point).ToString(),
                 IsButtonActive = false, IsImageBorderVisible = true
             };
+            
             return gridItemUpdateData;
         }
 
@@ -130,5 +131,12 @@ namespace LevelSolver
             string text = gridValues[point.x, point.y].ToString();
             return new GridItemButtonTextData { CellStatus = cellStatus, Text = text};
         }
+
+        public IrrationalNumber[,] GetGridValues() => gridValues;
     }
 }
+
+
+
+
+

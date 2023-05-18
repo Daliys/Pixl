@@ -1,14 +1,15 @@
 using Data;
 using Grid.GridData;
-using Grid.GridItems;
+using UI;
 
 namespace LevelSolver
 {
     public abstract class LevelSolver : LevelBase
     {
-
-        public virtual void Initialize(bool[,] startingGrid)
+        protected AbstractUILevel uiLevel;
+        public virtual void Initialize(bool[,] startingGrid, AbstractUILevel uiLevel)
         {
+            this.uiLevel = uiLevel;
             //Change Lenght 
             gridSize = new Point(startingGrid.GetLength(0), startingGrid.GetLength(1));
             grid = new bool[gridSize.x, gridSize.y];
@@ -17,6 +18,8 @@ namespace LevelSolver
         }
 
         protected abstract void StartSolving();
+
+        public abstract GridItemData[,] GetGridForResultExplanationPanel(Point point);
 
 
         public virtual GridItemData GetGridItemDataAtPoint(Point point)

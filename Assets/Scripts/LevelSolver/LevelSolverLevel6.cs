@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using Grid.GridData;
 using Grid.GridItems;
+using UI;
 
 namespace LevelSolver
 {
@@ -11,9 +13,9 @@ namespace LevelSolver
         protected List<bool[,]> iterationList;
 
     
-        public override void Initialize(bool[,] startingGrid)
+        public override void Initialize(bool[,] startingGrid, AbstractUILevel uiLevel)
         {
-            base.Initialize(startingGrid);
+            base.Initialize(startingGrid, uiLevel);
         
             tempGrid = new bool[gridSize.x, gridSize.y];
             iterationList = new List<bool[,]>();
@@ -42,7 +44,12 @@ namespace LevelSolver
                 iterationList.Add(tempGrid.Clone() as bool[,]);
             }
         }
-    
+
+        public override GridItemData[,] GetGridForResultExplanationPanel(Point point)
+        {
+            throw new System.NotImplementedException();
+        }
+
         private int SecondSolvingIteration()
         {
             int count = 0;

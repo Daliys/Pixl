@@ -27,7 +27,7 @@ public class PopUpScrollingPanel : MonoBehaviour
     
     private void Initialize()
     {
-        foreach (var value in AvailableValuesForLevel1.AvailableValue)
+        foreach (var value in level.GetAvailableValues())
         {
             GameObject gm = Instantiate(prefab, parent.transform);
             ScrollingElement scrollingElement = gm.GetComponent<ScrollingElement>();
@@ -93,8 +93,8 @@ public class PopUpScrollingPanel : MonoBehaviour
         for (int i = 0; i < scrollingElements.Count; i++)
         {
             scrollingElements[i].SetValues(isNegative
-                ? AvailableValuesForLevel1.AvailableValue[i].SetNegative()
-                : AvailableValuesForLevel1.AvailableValue[i]);
+                ?  level.GetAvailableValues()[i].SetNegative()
+                :  level.GetAvailableValues()[i]);
         }
     }
 

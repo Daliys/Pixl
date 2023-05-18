@@ -11,18 +11,27 @@ namespace Grid.GridFillers
 
         public virtual void OnChildButtonClicked(GridItemClickable gridItem)
         {
-            
+            uiLevel.OnButtonGridItemClicked(gridItem);
         }
         
-        
-        public void UpdateGridByResultValue()
+        public void UpdateGridByCheckResultAnswer(PlayerLevel.PlayerLevel playerLevel)
         {
-         //   UpdateGridByResultData(((LevelSolverLevel1)uiLevel.LevelSolver).GetCellStatusAtPoint,((PlayerLevel1)uiLevel.PlayerLevel).GetClickableGridItemResultStatus);
+            UpdateGridBy(playerLevel.GetResultDataForUpdateCell);
+        }
+        
+        public void UpdateGridByCorrectSolvedGrid(LevelSolver.LevelSolver levelSolverLevel)
+        {
+            UpdateGridBy(levelSolverLevel.GetGridItemDataAtPoint);
         }
 
-        public void UpdateGridByPlayerLevelGrid()
+        public void UpdateGridByExplanationMistakeResultAnswer(GridItem gridItem, LevelSolver.LevelSolver levelSolver)
         {
-         //   UpdateGridBy(((PlayerLevel1)uiLevel.PlayerLevel).GetCellStatusAtPoint);
+            UpdateGridBy(levelSolver.GetGridForResultExplanationPanel(gridItem.Point));
+        }
+
+        public void UpdateGridByPlayerLevelGrid(PlayerLevel.PlayerLevel playerLevel)
+        {
+            UpdateGridBy(playerLevel.GetGritItemDataAtPoint);
         }
 
         public void UpdateGridByPreviousGridValues()

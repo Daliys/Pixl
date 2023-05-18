@@ -1,12 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Data;
 using Grid.GridData;
 using Grid.GridFillers;
 using Grid.GridItems;
 using LevelSolver;
 using PlayerLevel;
+using ResultPanel;
 using UnityEngine;
 
 namespace UI
@@ -20,39 +19,39 @@ namespace UI
         
         private PopUpScrollingPanel popUpScrollingPanelClass;
         private bool isCheckButtonPressed;
-
-        // #Temproraty DEBUG
-        private int counter = 0;
-        Dictionary<int, int> numbers = new Dictionary<int, int>();
-
         
         public override void InitializeOnAwake()
         {
             popUpScrollingPanelClass = popUpScrollingPanel.GetComponent<PopUpScrollingPanel>();
-            
-            levelGenerator = new LevelGenerator();
-            levelSolver = new LevelSolverLevel1();
-            playerLevel = new PlayerLevel1();
+
+            InitializeBasValues();
             
             gridFiller.Initialize(gridSize, this);
             
             levelGenerator.Initialize(gridSize);
-            levelSolver.Initialize(levelGenerator.Grid);
+            levelSolver.Initialize(levelGenerator.Grid, this);
             GetPlayerLevel().Initialize(levelGenerator.Grid, this);
             
-            gridFiller.UpdateGridByPlayerGrid();
+            gridFiller.UpdateGridByPlayerGrid(GetPlayerLevel());
 
         }
 
-        public void OnButtonItemClicked(GridItem gridItem)
+        protected virtual void InitializeBasValues()
+        {
+            levelGenerator = new LevelGenerator();
+            levelSolver = new LevelSolverLevel1();
+            playerLevel = new PlayerLevel1();
+        }
+
+        public override void OnButtonGridItemClicked(GridItem gridItem)
         {
             if (isCheckButtonPressed)
             {
                 gridFiller.UpdateGridByExplanationMistakeResultAnswer(gridItem);
-                UIResultPanel resultUI = resultPanel.GetComponent<UIResultPanel>();
+                UIResultPanel1 resultUI = resultPanel.GetComponent<UIResultPanel1>();
 
                 GridItemData correctData = GetLevelSolver().GetGridItemDataAtPoint(gridItem.Point);
-                GridItemData playerData = GetPlayerLevel().GetPlayerDataForUpdateCell(gridItem.Point);
+                GridItemData playerData = GetPlayerLevel().GetGritItemDataAtPoint(gridItem.Point);
                 resultUI.InitializeErrorDescriptionPanel(correctData, playerData);
             }
             else
@@ -67,7 +66,7 @@ namespace UI
             popUpScrollingPanel.SetActive(isActive);
             Reference.reference.UIController.SetActiveBottomPanel(!isActive);
             popUpScrollingPanelClass.OnGridItemClicked(gridItem);
-            gridFiller.UpdateGridByPlayerGrid();
+            gridFiller.UpdateGridByPlayerGrid(GetPlayerLevel());
         }
 
         public override void OnButtonCheckResultClicked()
@@ -78,7 +77,7 @@ namespace UI
             informationPanel.SetActive(false);
             Reference.reference.UIController.SetActiveBottomPanel(false);
             resultPanel.SetActive(true);
-            UIResultPanel resultUI = resultPanel.GetComponent<UIResultPanel>();
+            UIResultPanel1 resultUI = resultPanel.GetComponent<UIResultPanel1>();
             bool isGridFilledCorrect = GetPlayerLevel().IsGridFilledCorrect();
 
             resultUI.InitializeStartPanel(isGridFilledCorrect? ResultStatus.Correct : ResultStatus.WrongValue);
@@ -89,11 +88,10 @@ namespace UI
             OnButtonCheckResultClicked();
         }
 
-
         public void OnButtonScrollingBackClicked()
         {
             gridFiller.SetSelectedGridItem(null);
-            gridFiller.UpdateGridByPlayerGrid();
+            gridFiller.UpdateGridByPlayerGrid(GetPlayerLevel());
             popUpScrollingPanel.SetActive(false);
             Reference.reference.UIController.SetActiveBottomPanel(true);
         }
@@ -105,48 +103,11 @@ namespace UI
             gridFiller.UpdateSelectedGridItem(number.ToString());
         }
 
-
-        private IEnumerator Statistic()
+        public virtual List<IrrationalNumber> GetAvailableValues()
         {
-            for (int ll = 0; ll < 1000; ll++)
-            {
-                for (int iter = 0; iter < 1000; iter++)
-                {
-                    LevelGenerator generator = new LevelGenerator();
-                    generator.Initialize(gridSize);
-                    levelSolver.Initialize(generator.Grid);
-                    IrrationalNumber[,] values = ((LevelSolverLevel1)levelSolver).gridValues;
-
-                    for (int i = 0; i < gridSize.x; i++)
-                    {
-                        for (int j = 0; j < gridSize.y; j++)
-                        {
-                            int value = values[i, j].number;
-                            if (numbers.ContainsKey(Mathf.Abs(value))) numbers[Mathf.Abs(value)] += 1;
-                            else numbers[Mathf.Abs(value)] = 1;
-                        }
-                    }
-                }
-
-                yield return null;
-                print("Iter " + (ll * 1000));
-            }
-        
-            var sortedDict = numbers.OrderBy(x => x.Value)
-                .ToDictionary(x => x.Key, x => x.Value);
-
-        
-            print("");
-            print("");
-
-            string str="";
-            foreach (var variable in sortedDict)
-            {
-                str += "√" + variable.Key + " Кол-во : " + variable.Value + "\n";
-            }
-            print(str);
+            return AvailableValuesForLevel1.AvailableValue;
         }
-        
+
         public bool IsCheckButtonPressed => isCheckButtonPressed;
 
         private PlayerLevel1 GetPlayerLevel() => (PlayerLevel1) playerLevel;

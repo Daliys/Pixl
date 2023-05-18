@@ -19,18 +19,7 @@ namespace PlayerLevel
             grid = startingGrid.Clone() as bool[,];
         }
 
-
-        public void SetGridValue(Point point, IrrationalNumber number)
-        {
-            gridValues[point.x, point.y] = number;
-        }
-
-        public new IrrationalNumber GetGridValue(Point point)
-        {
-            return gridValues[point.x, point.y];
-        }
-
-        public GridItemButtonTextData GetPlayerDataForUpdateCell(Point point)
+        public override GridItemData GetGritItemDataAtPoint(Point point)
         {
             CellStatus cellStatus = grid[point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
             IrrationalNumber number = gridValues[point.x, point.y];
@@ -43,8 +32,21 @@ namespace PlayerLevel
             return new GridItemButtonTextData
                 {CellStatus = cellStatus, Text = str, IsImageAlpha100 = isAlpha, IsImageBorderVisible = isBorder};
         }
+
+
+        public void SetGridValue(Point point, IrrationalNumber number)
+        {
+            gridValues[point.x, point.y] = number;
+        }
+
+        public new IrrationalNumber GetGridValue(Point point)
+        {
+            return gridValues[point.x, point.y];
+        }
+
+   
         
-        public GridItemButtonTextData GetResultDataForUpdateCell(Point point)
+        public override GridItemData GetResultDataForUpdateCell(Point point)
         {
             IrrationalNumber solverNumber = GetLevelSolver().GetGridValueAtPoint(point);
             IrrationalNumber playerNumber = gridValues[point.x, point.y];
@@ -68,15 +70,14 @@ namespace PlayerLevel
             
             return new GridItemButtonTextData{CellStatus = cellStatus, Text = text, IsButtonActive = isClickable};
         }
-
-     
-        public bool IsGridFilledCorrect()
+        
+        public override bool IsGridFilledCorrect()
         {
             for (int i = 0; i < gridSize.x; i++)
             {
                 for (int j = 0; j < gridSize.y; j++)
                 {
-                    IrrationalNumber number = GetLevelSolver().gridValues[i, j];
+                    IrrationalNumber number = GetLevelSolver().GetGridValues()[i, j];
                     if (!number.Equals(gridValues[i, j])) return false;
                 }
             }

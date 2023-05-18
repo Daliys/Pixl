@@ -15,4 +15,7 @@ MonoBehaviour:
   emptyImage: {fileID: 21300000, guid: 08d123a137de04d6c900cf58e2f558ec, type: 3}
   filledImage: {fileID: 21300000, guid: 372f039f1947e47b792f052902e0e071, type: 3}
   selectedImage: {fileID: 21300000, guid: 347e55d376dbb42f79731147c7f04498, type: 3}
+  selectedWhite: {fileID: 21300000, guid: 2aac5c49b6f434d8db4aa9e2e4270a18, type: 3}
+  selectedBlack: {fileID: 21300000, guid: 093076204585f46059718bd4d9f61720, type: 3}
+  selectedYellow: {fileID: 21300000, guid: 0ce78e8c98d32431cae981a6aba56d1a, type: 3}
   warningImage: {fileID: 21300000, guid: a3ff3bc2db5c2400399bb1229e9ae92a, type: 3}

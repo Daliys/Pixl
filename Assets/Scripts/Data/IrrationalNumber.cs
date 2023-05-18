@@ -50,19 +50,7 @@ namespace Data
             if (obj == null) return false;
             return Mathf.Abs(((IrrationalNumber)obj).number) == Mathf.Abs(number);
         }
-        /*
-    public static bool operator ==(IrrationalNumber num1, IrrationalNumber num2)
-    {
-        if (num1 == null && num2 == null) return true;
-        return num1 != null && num2 != null && num1.number == num2.number;
-    }
-
-    public static bool operator !=(IrrationalNumber num1, IrrationalNumber num2)
-    {
-        if (num1 != null && num2 != null) return true;
-        return num1 != null && num2 != null && num1.number != num2.number;
-    }*/
-
+        
         public static bool operator >(IrrationalNumber num1, IrrationalNumber num2) => num1.number > num2.number;
 
         public static bool operator <(IrrationalNumber num1, IrrationalNumber num2) => num1.number < num2.number;

@@ -6,6 +6,9 @@ namespace Data
         Filled,
         Empty,
         Selected,
-        Warning
+        SelectedWhite,
+        SelectedBlack,
+        SelectedYellow,
+        Warning,
     }
 }

@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class LevelBase 
 {
     protected bool[,] grid;

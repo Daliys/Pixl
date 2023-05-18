@@ -16,5 +16,10 @@ namespace Grid.GridFillers
             UpdateGridBy(((PlayerLevel6)uiLevel.PlayerLevel).GetPreviousGridItemStatus);
         }
 
+        public void UpdateMaskGrid(Mask mask)
+        {
+            UpdateGridBy(mask.GetMaskGridItemAtPoint);
+        }
+
     }
 }
