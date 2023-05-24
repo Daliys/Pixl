@@ -25,18 +25,18 @@ public class LevelGenerator : LevelBase
         int fillCount = (int)(gridSize.x * gridSize.y * fillCoef);
         int counterLimiter = 0;
         int ignoreCounter = 0;
-        
+
         for (int i = 0; i < fillCount;)
         {
             if (counterLimiter++ > 300)
             {
                 return;
             }
-            
+
             if (availableToTake.Count == 0) return;
 
             Point randomPoint = availableToTake[Random.Range(0, availableToTake.Count)];
-            
+
             if (!IsHaveAvailableAround(randomPoint))
             {
                 availableToTake.Remove(randomPoint);

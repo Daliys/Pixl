@@ -27,7 +27,28 @@ namespace PlayerLevel
 
         public override GridItemData GetGritItemDataAtPoint(Point point)
         {
-            throw new System.NotImplementedException();
+            CellStatus finalStatus;
+            bool isClickable = grid[point.x, point.y];
+            if (playerIterations.Count > 1)
+            {
+                CellStatus lastCellStatus =
+                    playerIterations[^1][point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
+                CellStatus prevCellStatus =
+                    playerIterations[^2][point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
+                
+                finalStatus = (lastCellStatus != prevCellStatus)? CellStatus.Selected : lastCellStatus;
+                isClickable = playerIterations[^2][point.x, point.y];
+            }
+            else
+            {
+                CellStatus lastCellStatus = playerIterations[^1][point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
+                CellStatus prevCellStatus = grid[point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
+                
+                finalStatus = (lastCellStatus != prevCellStatus)? CellStatus.Selected : lastCellStatus;
+                isClickable = grid[point.x, point.y];
+            }
+            
+            return new GridItemButtonData {CellStatus = finalStatus, IsButtonActive = isClickable};
         }
 
         public override bool IsGridFilledCorrect()
@@ -91,6 +112,13 @@ namespace PlayerLevel
         }
     
         public List<bool[,]> PlayerIterations => playerIterations;
+
+        public void OnGridItemClicked(GridItem gridItem)
+        {
+            Point point = gridItem.Point;
+            playerIterations[^1][point.x, point.y] = !playerIterations[^1][point.x, point.y];
+            gridItem.UpdateCellData(GetGritItemDataAtPoint(gridItem.Point));
+        }
 
         public ResultStatus GetClickableGridItemResultStatus(Point point)
         {

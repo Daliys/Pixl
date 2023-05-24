@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ScriptableObjects
 {
-    [CreateAssetMenu(fileName = "ImagesForGridItem", menuName = "CustomData/ImagesForGridItem")]
+    [CreateAssetMenu(fileName = "ImagesForGridItem", menuName = "Custom/ImagesForGridItem")]
     public class ImagesForGridItem : ScriptableObject
     {
         public Sprite emptyImage;

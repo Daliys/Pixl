@@ -11,7 +11,7 @@ namespace UI
     public class UILevel6 : AbstractUILevel
     {
         
-        [SerializeField] private GridFiller playerGridFiller;
+        [SerializeField] private GridFillerClickable playerGridFiller;
         [FormerlySerializedAs("previousGridFiller")] [SerializeField] private GridFillerPreview gridFillerPreview;
 
         [SerializeField] private TextMeshProUGUI iterationText;
@@ -25,26 +25,25 @@ namespace UI
             levelGenerator = new LevelGenerator();
             levelSolver = new LevelSolverLevel6();
             playerLevel = new PlayerLevel6();
-
             
             previousIterationPanel.SetActive(false);
             previousIterationButton.SetActive(false);
-
-
+            
             playerGridFiller.Initialize(gridSize, this);
             gridFillerPreview.Initialize(gridSize, this);
             
             levelGenerator.Initialize(gridSize);
             levelSolver.Initialize(levelGenerator.Grid, this);
-            ((PlayerLevel6)PlayerLevel).Initialize(levelGenerator.Grid, this);
+            GetPlayerLevel().Initialize(levelGenerator.Grid, this);
+
+            playerGridFiller.UpdateGridByPlayerLevelGrid(GetPlayerLevel());
 
             UpdateIterationNumber();
-
         }
 
         public override void OnButtonGridItemClicked(GridItem gridItem)
         {
-
+            GetPlayerLevel().OnGridItemClicked(gridItem);
         }
 
         public override void OnButtonCheckResultClicked()
@@ -120,6 +119,7 @@ namespace UI
             iterationText.text = $"{((PlayerLevel6)PlayerLevel).GetCurrentIteration(),0:D2}";
         }
         
-        
+        private PlayerLevel6 GetPlayerLevel() => (PlayerLevel6) playerLevel;
+
     }
 }

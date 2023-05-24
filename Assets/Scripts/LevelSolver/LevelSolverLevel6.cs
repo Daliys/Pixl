@@ -7,21 +7,19 @@ namespace LevelSolver
 {
     public class LevelSolverLevel6 : LevelSolver
     {
-    
+
         protected bool[,] tempGrid;
-    
         protected List<bool[,]> iterationList;
 
-    
         public override void Initialize(bool[,] startingGrid, AbstractUILevel uiLevel)
         {
             base.Initialize(startingGrid, uiLevel);
-        
+
             tempGrid = new bool[gridSize.x, gridSize.y];
             iterationList = new List<bool[,]>();
-        
+
             tempGrid = startingGrid.Clone() as bool[,];
-        
+
             StartSolving();
         }
 
@@ -45,41 +43,39 @@ namespace LevelSolver
             }
         }
 
-        public override GridItemData[,] GetGridForResultExplanationPanel(Point point)
-        {
-            throw new System.NotImplementedException();
-        }
-
         private int SecondSolvingIteration()
         {
             int count = 0;
-        
+
             for (int i = 0; i < gridSize.x; i++)
             {
                 for (int j = 0; j < gridSize.y; j++)
                 {
                     Point point = new Point(i, j);
-                
-                    if(!GetGridValue(point)) continue;
+
+                    if (!GetGridValue(point)) continue;
 
                     int neighborCount = GetCountOfFilledNeighbor(point);
-                    if(!(neighborCount >= 2 && neighborCount <= 6)) continue;
+                    if (!(neighborCount >= 2 && neighborCount <= 6)) continue;
 
                     int neighborTransitionCount = GetCountOfNeighborTransitions(point);
-                    if(neighborTransitionCount != 1) continue;
-                
-                    if(IsPointInRangeAndFilled(point.GetPoint(0)) && IsPointInRangeAndFilled(point.GetPoint(2)) 
-                                                                  && IsPointInRangeAndFilled(point.GetPoint(6))) continue;
-                    if(IsPointInRangeAndFilled(point.GetPoint(0)) && IsPointInRangeAndFilled(point.GetPoint(4))
-                                                                  && IsPointInRangeAndFilled(point.GetPoint(6))) continue;
-                
+                    if (neighborTransitionCount != 1) continue;
+
+                    if (IsPointInRangeAndFilled(point.GetPoint(0)) && IsPointInRangeAndFilled(point.GetPoint(2))
+                                                                   && IsPointInRangeAndFilled(point.GetPoint(6)))
+                        continue;
+                    if (IsPointInRangeAndFilled(point.GetPoint(0)) && IsPointInRangeAndFilled(point.GetPoint(4))
+                                                                   && IsPointInRangeAndFilled(point.GetPoint(6)))
+                        continue;
+
                     tempGrid[point.x, point.y] = false;
                     count++;
                 }
             }
+
             return count;
         }
-    
+
         private int FirstSolvingIteration()
         {
             int count = 0;
@@ -88,44 +84,37 @@ namespace LevelSolver
                 for (int j = 0; j < gridSize.y; j++)
                 {
                     Point point = new Point(i, j);
-                
-                    //Utils.print("Iter " + iterationList.Count + " Point " + point);
-                
-                    if(!GetGridValue(point)) continue;
-                    //Utils.print ( "1. Filled" );
-                
-                    int neighborCount = GetCountOfFilledNeighbor(point);
-                    //  Utils.print("2. " + neighborCount);
-                    if(neighborCount is not (>= 2 and <= 6)) continue;
-                    //  Utils.print("2. - true");
 
-                    int neighborTransitionCount = GetCountOfNeighborTransitions(point); 
-                    //  Utils.print("3. " + neighborTransitionCount);
-                    if(neighborTransitionCount is not 1) continue;
-                    // Utils.print("3. - true");
-                
-                    if(IsPointInRangeAndFilled(point.GetPoint(0)) && IsPointInRangeAndFilled(point.GetPoint(2)) 
-                                                                  && IsPointInRangeAndFilled(point.GetPoint(4))) continue;
-                    //Utils.print("4. >");
-                    if(IsPointInRangeAndFilled(point.GetPoint(2)) && IsPointInRangeAndFilled(point.GetPoint(4))
-                                                                  && IsPointInRangeAndFilled(point.GetPoint(6))) continue;
-                    //Utils.print("5. _-_");
+                    if (!GetGridValue(point)) continue;
+
+                    int neighborCount = GetCountOfFilledNeighbor(point);
+                    if (neighborCount is not (>= 2 and <= 6)) continue;
+
+                    int neighborTransitionCount = GetCountOfNeighborTransitions(point);
+                    if (neighborTransitionCount is not 1) continue;
+
+                    if (IsPointInRangeAndFilled(point.GetPoint(0)) && IsPointInRangeAndFilled(point.GetPoint(2))
+                                                                   && IsPointInRangeAndFilled(point.GetPoint(4)))
+                        continue;
+                    if (IsPointInRangeAndFilled(point.GetPoint(2)) && IsPointInRangeAndFilled(point.GetPoint(4))
+                                                                   && IsPointInRangeAndFilled(point.GetPoint(6)))
+                        continue;
                     tempGrid[point.x, point.y] = false;
                     count++;
                 }
             }
+
             return count;
         }
-    
+
         private int GetCountOfFilledNeighbor(Point point)
         {
             int count = 0;
-
             for (int i = 0; i < 8; i++)
             {
                 if (IsPointInRangeAndFilled(point.GetPoint(i))) count++;
             }
-        
+
             return count;
         }
 
@@ -136,10 +125,10 @@ namespace LevelSolver
 
             for (int i = 0; i < 9; i++)
             {
-                Point pointSide = point.GetPoint(i%8);
+                Point pointSide = point.GetPoint(i % 8);
                 if (i == 0)
                 {
-                    currentState = IsPointInRange(pointSide) && GetGridValue(pointSide) ;
+                    currentState = IsPointInRange(pointSide) && GetGridValue(pointSide);
                     continue;
                 }
 
@@ -160,9 +149,15 @@ namespace LevelSolver
                     }
                 }
             }
+
             return count - 1;
         }
-        
+
+
+        public override GridItemData[,] GetGridForResultExplanationPanel(Point point)
+        {
+            throw new System.NotImplementedException();
+        }
 
     }
 }

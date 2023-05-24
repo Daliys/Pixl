@@ -52,11 +52,8 @@ namespace Data
         }
         
         public static bool operator >(IrrationalNumber num1, IrrationalNumber num2) => num1.number > num2.number;
-
         public static bool operator <(IrrationalNumber num1, IrrationalNumber num2) => num1.number < num2.number;
-    
         public static bool operator >=(IrrationalNumber num1, IrrationalNumber num2) => num1.number >= num2.number;
-
         public static bool operator <=(IrrationalNumber num1, IrrationalNumber num2) => num1.number <= num2.number;
 
     }

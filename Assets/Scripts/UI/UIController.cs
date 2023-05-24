@@ -15,8 +15,9 @@ namespace UI
 
         private void Awake()
         {
+            level = levelPrefab.GetComponent<AbstractUILevel>();
             //GameObject gm = Instantiate(levelPrefab, transform);
-            levelPrefab.GetComponent<AbstractUILevel>().InitializeOnAwake();
+            level.InitializeOnAwake();
         }
 
 
