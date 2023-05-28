@@ -34,12 +34,11 @@ namespace Grid.GridFillers
         {
             UpdateGridBy(playerLevel.GetGritItemDataAtPoint);
         }
-  
 
 
-        public void UpdateGridByPreviousGridValues()
+        public void UpdateGridByPreviousGridValues(GridItemData[,] data)
         {
-        //    UpdateGridBy(((PlayerLevel1)uiLevel.PlayerLevel).GetPreviousGridItemStatus);
+            UpdateGridBy(data);
         }
     }
 }

@@ -17,7 +17,7 @@ public class CardBasic : MonoBehaviour
     {
         index = number;
         this.onButtonCardClicked = onButtonCardClicked;
-        levelNumberText.text = number.ToString("D2");;
+        levelNumberText.text = number.ToString("D2");
         levelNameText.text = header;
     }
     
@@ -25,12 +25,5 @@ public class CardBasic : MonoBehaviour
     public void OnButtonClicked()
     {
         onButtonCardClicked?.Invoke(index);
-    }
-
-    private void OpenGame()
-    {
-        Reference.reference.GameCanvas.gameObject.SetActive(true);
-        Reference.reference.UIController.NewGame();
-        Reference.reference.MainMenuCanvas.gameObject.SetActive(false);
     }
 }

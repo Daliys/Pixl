@@ -7,5 +7,6 @@ namespace Data.CardsModel
     public class CardModelPractice : CardModel
     {
         public GameObject levelPrefab;
+        public Sprite imageWiki;
     }
 }

@@ -1,13 +1,12 @@
 using System.Collections.Generic;
+using Data;
 using Grid.GridData;
-using Grid.GridItems;
 using UI;
 
 namespace LevelSolver
 {
     public class LevelSolverLevel6 : LevelSolver
     {
-
         protected bool[,] tempGrid;
         protected List<bool[,]> iterationList;
 
@@ -153,10 +152,39 @@ namespace LevelSolver
             return count - 1;
         }
 
+        public bool GetGridStatusAtLastIteration(Point point)
+        {
+            return iterationList[^1][point.x, point.y];
+        }
+
 
         public override GridItemData[,] GetGridForResultExplanationPanel(Point point)
         {
-            throw new System.NotImplementedException();
+            GridItemButtonData[,] gridItemUpdateData = new GridItemButtonData[gridSize.x, gridSize.y];
+
+            for (int i = 0; i < gridSize.x; i++)
+            {
+                for (int j = 0; j < gridSize.y; j++)
+                {
+                    CellStatus cellStatus = grid[i, j] ? CellStatus.Filled : CellStatus.Empty;
+                    gridItemUpdateData[i, j] = new GridItemButtonData
+                    {
+                        CellStatus = cellStatus, IsButtonActive = false, IsImageAlpha100 = false
+                    };
+                }
+            }
+            CellStatus cell = grid[point.x, point.y] ? CellStatus.SelectedWhite : CellStatus.SelectedBlack;
+            gridItemUpdateData[point.x,point.y] =  new GridItemButtonData
+            {
+                CellStatus = cell, IsButtonActive = false, IsImageAlpha100 = true
+            };
+            
+            return gridItemUpdateData;
+        }
+        
+        public bool GetCorrectValueAtPoint(Point point)
+        {
+            return grid[point.x, point.y];
         }
 
     }

@@ -6,8 +6,7 @@ namespace MenuUI
     public class PracticeUI : AbstractCardsUI
     {
         [SerializeField] private PracticeCards practiceCards;
-        
-        
+
         public override void Initialize()
         {
             if (isInitialize)
@@ -33,7 +32,10 @@ namespace MenuUI
 
         protected override void OnButtonCardClicked(int index)
         {
-            
+            Reference.reference.UIController.gameObject.SetActive(true);
+            Reference.reference.UIController.Initialize(practiceCards.models[index-1]);
+            Reference.reference.MainMenuCanvas.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
         
     }

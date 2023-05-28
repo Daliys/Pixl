@@ -1,7 +1,10 @@
+using Data;
+using Grid.GridData;
 using Grid.GridFillers;
 using Grid.GridItems;
 using LevelSolver;
 using PlayerLevel;
+using ResultPanel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -28,6 +31,7 @@ namespace UI
             
             previousIterationPanel.SetActive(false);
             previousIterationButton.SetActive(false);
+            timerAreaPanel.SetActive(true);
             
             playerGridFiller.Initialize(gridSize, this);
             gridFillerPreview.Initialize(gridSize, this);
@@ -37,35 +41,55 @@ namespace UI
             GetPlayerLevel().Initialize(levelGenerator.Grid, this);
 
             playerGridFiller.UpdateGridByPlayerLevelGrid(GetPlayerLevel());
-
+            
             UpdateIterationNumber();
         }
 
         public override void OnButtonGridItemClicked(GridItem gridItem)
         {
-            GetPlayerLevel().OnGridItemClicked(gridItem);
+            if (isCheckButtonPressed)
+            {
+                playerGridFiller.UpdateGridByExplanationMistakeResultAnswer(gridItem, GetLevelSolver());
+                UIResultPanel6 resultUI = resultPanel.GetComponent<UIResultPanel6>();
+
+                GridItemData correctData = GetLevelSolver().GetGridItemDataAtPoint(gridItem.Point);
+                GridItemData playerData = GetPlayerLevel().GetGritItemDataAtPoint(gridItem.Point);
+                resultUI.InitializeErrorDescriptionPanel(correctData, playerData);
+            }
+            else
+            {
+                GetPlayerLevel().OnGridItemClicked(gridItem);
+            }
         }
 
         public override void OnButtonCheckResultClicked()
         {
-            previousIterationPanel.SetActive(false);
+            isCheckButtonPressed = true;
             
-            //resultPanel.GetComponent<ResultUI>().InitializeResultPanel(playerLevel.IsResultCorrect);
+            previousIterationPanel.SetActive(false);
+            timerAreaPanel.SetActive(false);
+            playerGridFiller.UpdateGridByCheckResultAnswer(GetPlayerLevel());
+            informationPanel.SetActive(false);
+            Reference.reference.UIController.SetActiveBottomPanel(false);
+            resultPanel.SetActive(true);
+            UIResultPanel6 resultUI = resultPanel.GetComponent<UIResultPanel6>();
+            bool isGridFilledCorrect = GetPlayerLevel().IsGridFilledCorrect();
+
+            resultUI.InitializeStartPanel(isGridFilledCorrect? ResultStatus.Correct : ResultStatus.WrongValue);
 
         }
 
         public override void OnButtonBackExplanationPanelClicked()
         {
-            
+            OnButtonCheckResultClicked();
         }
-
-
+        
         public void OnButtonEditPreviousStepClicked()
         {
-            //playerGridFiller.UpdateGridByPreviousGridValues();
-            ((PlayerLevel6)PlayerLevel).OnButtonEditPreviousClicked();
+            playerGridFiller.UpdateGridByPreviousGridValues(GetPlayerLevel().GetPreviousGridItemStatus());
+            GetPlayerLevel().OnButtonEditPreviousClicked();
 
-            if (((PlayerLevel6)PlayerLevel).PlayerIterations.Count <= 1)
+            if (GetPlayerLevel().PlayerIterations.Count <= 1)
             {
                 previousIterationPanel.SetActive(false);
                 previousIterationButton.SetActive(false);
@@ -77,49 +101,27 @@ namespace UI
             UpdateIterationNumber();
         }
         
-        
         public void OnButtonNextIterationClicked()
         {
+            playerGridFiller.UpdateGridByPlayerLevelGrid(GetPlayerLevel());
+            GetPlayerLevel().SaveIteration();
+            
+            if (GetPlayerLevel().PlayerIterations.Count > 1)
+            {
+                previousIterationPanel.SetActive(true);
+                previousIterationButton.SetActive(true);
+                gridFillerPreview.UpdatePreviousStepGrid();
+            }
 
-      
-            /*levelGenerator = new LevelGenerator();
-            levelGenerator.Initialize(gridSize);*/
-       
-            /*
-            levelSolver.Initialize(levelGenerator.Grid);
-            ((ClickableWithTextGridFiller)playerGridFiller).UpdateGridByCorrectAnswer();
-            */
-        
-            //playerGridFiller.UpdateGridByPlayerLevelGrid();
-            //playerLevel.SaveIteration();
-        
-            //for debug
-        
-            /*
-        print("CurrentIter " + playerLevel.GetCurrentIteration());
-        previousIterationPanel.SetActive(true);
-        previousGridFiller.UpdateByCorrectAnswer();
-        */
-        
-        
-            //TODO temprary
-            /*
-        if (playerLevel.PlayerIterations.Count > 1)
-        {
-            previousIterationPanel.SetActive(true);
-            previousIterationButton.SetActive(true);
-            previousGridFiller.UpdatePreviousStepGrid();
-        }
-        */
             UpdateIterationNumber();
         }
-        
+
         private void UpdateIterationNumber()
         {
-            iterationText.text = $"{((PlayerLevel6)PlayerLevel).GetCurrentIteration(),0:D2}";
+            iterationText.text = $"{(((PlayerLevel6)PlayerLevel).GetCurrentIteration() +1),0:D2}";
         }
         
         private PlayerLevel6 GetPlayerLevel() => (PlayerLevel6) playerLevel;
-
+        private LevelSolverLevel6 GetLevelSolver() => (LevelSolverLevel6) levelSolver;
     }
 }

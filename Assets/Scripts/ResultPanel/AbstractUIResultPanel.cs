@@ -11,6 +11,7 @@ namespace ResultPanel
         [SerializeField] protected TextMeshProUGUI description1;
         [SerializeField] protected TextMeshProUGUI description2;
         [SerializeField] protected GameObject backButton;
+        [SerializeField] protected GameObject againButton;
 
         [SerializeField] protected Color whiteColor;
         [SerializeField] protected Color yellowColor;
@@ -19,6 +20,7 @@ namespace ResultPanel
         {
             header.text = "результат";
             backButton.SetActive(false);
+            againButton.SetActive(true);
 
             if (status.Equals(ResultStatus.Correct))
             {

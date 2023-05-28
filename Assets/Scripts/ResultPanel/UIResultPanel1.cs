@@ -47,6 +47,7 @@ namespace ResultPanel
                 bottomExplanation.enabled = true;
             
                 backButton.SetActive(true);
+                againButton.SetActive(false);
                 
                 yourAnswer.enabled = true;
                 correctAnswer.enabled = true;

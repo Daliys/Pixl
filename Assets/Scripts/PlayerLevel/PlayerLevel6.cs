@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Data;
 using Grid.GridData;
 using Grid.GridItems;
+using LevelSolver;
 using UI;
 
 namespace PlayerLevel
@@ -25,19 +26,20 @@ namespace PlayerLevel
             isResultCorrect = true;
         }
 
-        public override GridItemData GetGritItemDataAtPoint(Point point)
+        public GridItemData GetGritItemDataAtPointWhenClicked(Point point)
         {
             CellStatus finalStatus;
             bool isClickable = grid[point.x, point.y];
+            
             if (playerIterations.Count > 1)
             {
                 CellStatus lastCellStatus =
-                    playerIterations[^1][point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
+                    grid[point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
                 CellStatus prevCellStatus =
-                    playerIterations[^2][point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
+                    playerIterations[^1][point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
                 
                 finalStatus = (lastCellStatus != prevCellStatus)? CellStatus.Selected : lastCellStatus;
-                isClickable = playerIterations[^2][point.x, point.y];
+                isClickable = playerIterations[^1][point.x, point.y];
             }
             else
             {
@@ -45,20 +47,59 @@ namespace PlayerLevel
                 CellStatus prevCellStatus = grid[point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
                 
                 finalStatus = (lastCellStatus != prevCellStatus)? CellStatus.Selected : lastCellStatus;
-                isClickable = grid[point.x, point.y];
+                isClickable = playerIterations[^1][point.x, point.y];
             }
             
             return new GridItemButtonData {CellStatus = finalStatus, IsButtonActive = isClickable};
         }
 
+        public override GridItemData GetGritItemDataAtPoint(Point point)
+        {
+            CellStatus lastCellStatus = grid[point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
+            bool isClickable = grid[point.x, point.y];
+
+            return new GridItemButtonData { CellStatus = lastCellStatus, IsButtonActive = isClickable };
+        }
+
         public override bool IsGridFilledCorrect()
         {
-            throw new System.NotImplementedException();
+            for (int i = 0; i < gridSize.x; i++)
+            {
+                for (int j = 0; j < gridSize.y; j++)
+                {
+                    bool solverValue = GetLevelSolver().GetGridStatusAtLastIteration(new Point(i,j));
+                    if (grid[i,j] != solverValue) return false;
+                }
+            }
+        
+            return true;
         }
 
         public override GridItemData GetResultDataForUpdateCell(Point point)
         {
-            throw new System.NotImplementedException();
+            bool solverValue = GetLevelSolver().GetCorrectValueAtPoint(point);
+            bool playerValue = grid[point.x, point.y];
+            
+            CellStatus cellStatus;
+            bool isClickable = false;
+            bool isAlpha = true;
+            
+            if (solverValue && playerValue)
+            {
+                cellStatus = CellStatus.Filled;
+            }
+            else if (!solverValue && !playerValue)
+            {
+                cellStatus = grid[point.x, point.y] ? CellStatus.Filled : CellStatus.Empty;
+                isAlpha = false;
+            }
+            else
+            {
+                cellStatus = CellStatus.Warning;
+                isClickable = true;
+            }
+            
+            return new GridItemButtonTextData{CellStatus = cellStatus, IsButtonActive = isClickable, IsImageAlpha100 = isAlpha};
         }
 
         public void SaveIteration()
@@ -95,15 +136,15 @@ namespace PlayerLevel
             {
                 for (int j = 0; j < gridSize.y; j++)
                 {
-                    //TODO переделать этот кусок здесь ошибка
-                    /*if (GetPreviousGridItemStatus(new Point(i, j)).cellStatus == GridItem.CellStatus.SelectedByPlayer)
+                 
+                    if (GetPreviousGridItemStatus(new Point(i, j)).CellStatus == CellStatus.Selected)
                     {
                         grid[i, j] = false;
                     }
                     else
                     {
                         grid[i, j] = lastStep[i, j];
-                    }*/
+                    }
                 }
             }
 
@@ -116,8 +157,8 @@ namespace PlayerLevel
         public void OnGridItemClicked(GridItem gridItem)
         {
             Point point = gridItem.Point;
-            playerIterations[^1][point.x, point.y] = !playerIterations[^1][point.x, point.y];
-            gridItem.UpdateCellData(GetGritItemDataAtPoint(gridItem.Point));
+            grid[point.x, point.y] = !grid[point.x, point.y];
+            gridItem.UpdateCellData(GetGritItemDataAtPointWhenClicked(gridItem.Point));
         }
 
         public ResultStatus GetClickableGridItemResultStatus(Point point)
@@ -146,12 +187,47 @@ namespace PlayerLevel
             return new GridItemData{CellStatus = CellStatus.Selected};
         }
 
-     
+        public GridItemButtonData[,] GetPreviousGridItemStatus()
+        {
+            GridItemButtonData[,] data = new GridItemButtonData[gridSize.x, gridSize.y];
+
+            for (int i = 0; i < gridSize.x; i++)
+            {
+                for (int j = 0; j < gridSize.y; j++)
+                {
+                    Point point = new Point(i, j);
+                    if (playerIterations.Count < 2) return null;
+
+                    bool currentStatus = playerIterations[^1][point.x, point.y];
+                    bool previousStatus = playerIterations[^2][point.x, point.y];
+
+                    if (!currentStatus && !previousStatus)
+                    {
+                        data[i, j] = new GridItemButtonData { CellStatus = CellStatus.Empty, IsButtonActive = false };
+                        continue;
+                    }
+
+                    if (currentStatus && previousStatus)
+                    {
+                        data[i, j] = new GridItemButtonData { CellStatus = CellStatus.Filled, IsButtonActive = true };
+                        continue;
+                    }
+
+                    data[i, j] = new GridItemButtonData { CellStatus = CellStatus.Selected, IsButtonActive = true };
+                }
+            }
+
+            return data;
+
+        }
+
         public int GetCurrentIteration()
         {
             return playerIterations.Count - 1;
         }
 
         public bool IsResultCorrect => isResultCorrect;
+        
+        private LevelSolverLevel6 GetLevelSolver() => (LevelSolverLevel6)uiLevel.LevelSolver;
     }
 }

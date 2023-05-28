@@ -13,12 +13,8 @@ namespace UI
     {
         [SerializeField] private GridFillerPreview gridFillerMask;
         [SerializeField] private GridFillerClickable gridFiller;
-        [SerializeField] private GameObject informationPanel;
-        [SerializeField] private GameObject resultPanel;
         [SerializeField] private GameObject descriptionText;
-        
-        private bool isCheckButtonPressed;
-        
+
         protected Mask mask;
         
         public override void InitializeOnAwake()
@@ -63,7 +59,6 @@ namespace UI
             }
             else
             {
-
                 GetPlayerLevel().SetOppositePlayerValueAtPoint(gridItem.Point);
                 gridItem.UpdateCellData(GetPlayerLevel().GetGritItemDataAtPoint(gridItem.Point));
             }

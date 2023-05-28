@@ -9,6 +9,7 @@ namespace MenuUI
         [SerializeField] private GameObject menuPanel;
         [SerializeField] private GameObject chooseLevelPanel;
         [SerializeField] private GameObject chooseTestPanel;
+        [SerializeField] private GameObject aboutAppPanel;
 
    
         public void OnWikiButtonClicked()
@@ -18,12 +19,6 @@ namespace MenuUI
             wikiPanel.GetComponent<WikiUI>().Initialize();
         }
 
-        public void OnSettingButtonClicked()
-        {
-            HideAllPanels();
-            settingPanel.SetActive(true);
-        }
-
         public void OnPracticeButtonClicked()
         {
             HideAllPanels();
@@ -31,10 +26,17 @@ namespace MenuUI
             chooseLevelPanel.GetComponent<PracticeUI>().Initialize();
         }
 
+        public void OnAboutAppButtonClicked()
+        {
+            HideAllPanels();
+            aboutAppPanel.SetActive(true);
+        }
+
         public void OnTestingButtonClicked()
         {
             HideAllPanels();
-            
+            chooseTestPanel.SetActive(true);
+            chooseTestPanel.GetComponent<TestUI>().Initialize();
         }
 
         public void OpenMainMenuPanel()
@@ -50,6 +52,7 @@ namespace MenuUI
             wikiPanel.SetActive(false);
             menuPanel.SetActive(false);
             chooseTestPanel.SetActive(false);
+            aboutAppPanel.SetActive(false);
         }
     
     

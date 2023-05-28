@@ -20,6 +20,7 @@ namespace ResultPanel
 
             description2.color = whiteColor;
             backButton.SetActive(true);
+            againButton.SetActive(false);
         }
     }
 }

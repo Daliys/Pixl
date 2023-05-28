@@ -10,7 +10,6 @@ namespace LevelSolver
         public virtual void Initialize(bool[,] startingGrid, AbstractUILevel uiLevel)
         {
             this.uiLevel = uiLevel;
-            //Change Lenght 
             gridSize = new Point(startingGrid.GetLength(0), startingGrid.GetLength(1));
             grid = new bool[gridSize.x, gridSize.y];
             grid = startingGrid.Clone() as bool[,];

@@ -14,12 +14,9 @@ namespace UI
     {
         [SerializeField] private GridFillerClickableWithText gridFiller;
         [SerializeField] private GameObject popUpScrollingPanel;
-        [SerializeField] private GameObject informationPanel;
-        [SerializeField] private GameObject resultPanel;
-        
+
         private PopUpScrollingPanel popUpScrollingPanelClass;
-        private bool isCheckButtonPressed;
-        
+     
         public override void InitializeOnAwake()
         {
             popUpScrollingPanelClass = popUpScrollingPanel.GetComponent<PopUpScrollingPanel>();
