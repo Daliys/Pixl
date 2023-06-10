@@ -17,7 +17,7 @@ public class TestAnswerButton : MonoBehaviour
     
     public void Initialize(ButtonClicked buttonClicked)
     {
-        this.onButtonClicked = buttonClicked;
+        onButtonClicked = buttonClicked;
     }
 
     public void SetButtonValue(string text)

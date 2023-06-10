@@ -1,5 +1,6 @@
 using Data;
 using Grid.GridData;
+using Localization;
 
 namespace ResultPanel
 {
@@ -15,7 +16,6 @@ namespace ResultPanel
             string resultStatus = correctUpdateData.CellStatus == CellStatus.SelectedWhite
                 ? "отметить центральный пиксель"
                 : "не отмечать центральный пиксель";
-
             description2.text =
                 "В выделенном поле необходимо было " + resultStatus;
 

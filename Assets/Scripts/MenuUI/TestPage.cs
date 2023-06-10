@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using Data;
 using ScriptableObjects;
 using TMPro;
@@ -33,6 +33,7 @@ namespace MenuUI
         private int wrongAnswers; 
         
         private QuestionsDataList questionsDataList;
+        private QuestionData[] randomSortedQuestions;
         private int currentIndex;
 
         private bool isTestFinished;
@@ -40,6 +41,18 @@ namespace MenuUI
         public void Initialize(QuestionsDataList questionsDataList)
         {
             this.questionsDataList = questionsDataList;
+            
+            List<QuestionData> temp = new List<QuestionData>();
+            temp.AddRange(this.questionsDataList.questions);
+
+            randomSortedQuestions = new QuestionData[temp.Count];
+            
+            for (int i = 0; i < randomSortedQuestions.Length; i++)
+            {
+                int randomIndex = Random.Range(0, temp.Count);
+                randomSortedQuestions[i] = temp[randomIndex];
+                temp.RemoveAt(randomIndex);
+            }
             
             button1.Initialize(OnButtonClicked);
             button2.Initialize(OnButtonClicked);
@@ -53,13 +66,13 @@ namespace MenuUI
             resultPanel.gameObject.SetActive(false);
             nextButton.SetActive(false);
             ResetButtons();
-            InitializeQuestion(this.questionsDataList.questions[currentIndex]);
+            InitializeQuestion(randomSortedQuestions[currentIndex]);
         }
 
         private void InitializeQuestion(QuestionData questionData)
         {
             currentIndexText.text = (currentIndex+1).ToString("D2");
-            totalIndexText.text = "/ " + questionsDataList.questions.Length;
+            totalIndexText.text = "/ " + randomSortedQuestions.Length;
 
             if (string.IsNullOrEmpty(questionData.questionText)) questionText.gameObject.SetActive(false);
             else
@@ -89,7 +102,7 @@ namespace MenuUI
 
         private void OnButtonClicked(int index)
         {
-            int correctIndex = questionsDataList.questions[currentIndex].correctAnswerIndex;
+            int correctIndex = randomSortedQuestions[currentIndex].correctAnswerIndex;
             if (correctIndex == index)
             {
                 GetButton(index).gameObject.GetComponent<Image>().color = correctButtonColor;
@@ -107,7 +120,7 @@ namespace MenuUI
             button3.gameObject.GetComponent<Button>().enabled = false;
             nextButton.SetActive(true);
 
-            nextButtonText.text = (currentIndex+1) != questionsDataList.questions.Length ? "следующий вопрос" : "результат";
+            nextButtonText.text = (currentIndex+1) != randomSortedQuestions.Length ? "следующий вопрос" : "результат";
         }
 
         public void OnButtonNextClicked()
@@ -119,7 +132,7 @@ namespace MenuUI
                 return;
             }
             
-            if (currentIndex + 1 == questionsDataList.questions.Length)
+            if (currentIndex + 1 == randomSortedQuestions.Length)
             {
                 resultPanel.gameObject.SetActive(true);
                 resultCorrectText.text = correctAnswers.ToString();
@@ -130,7 +143,7 @@ namespace MenuUI
             }
             
             currentIndex++;
-            InitializeQuestion(questionsDataList.questions[currentIndex]);
+            InitializeQuestion(randomSortedQuestions[currentIndex]);
             ResetButtons();
             nextButton.SetActive(false);
         }

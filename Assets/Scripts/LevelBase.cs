@@ -14,13 +14,14 @@ public class LevelBase
     }
 
     
+    
     protected bool IsPointInRange(Point point)
     {
         if (point.x >= gridSize.x) return false;
         if (point.x < 0) return false;
         if (point.y < 0) return false;
         if (point.y >= gridSize.y) return false;
-
+        
         return true;
     }
 
