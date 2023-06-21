@@ -1,3 +1,4 @@
+using Localization;
 using ScriptableObjects;
 using UnityEngine;
 
@@ -23,7 +24,7 @@ namespace MenuUI
             {
                 GameObject gm = Instantiate(cardPrefab, contentPanel.transform);
                 CardBasic card = gm.GetComponent<CardBasic>();
-                card.Initialize(OnButtonCardClicked,i, model.name);
+                card.Initialize(OnButtonCardClicked,i, LocalizationManager.GetLocalizationValue(model.name.value));
                 i++;
             }
 

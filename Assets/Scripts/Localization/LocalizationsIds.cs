@@ -19,11 +19,12 @@ namespace Localization
         public static readonly LocalizationsIds MainMenuAboutButton = new() { value = "main_menu_about_button" };
         
         
-        public static readonly LocalizationsIds PracticeCardSmudgingEuclideanDistance = new() { value = "practice_card_smudging_euclidean_distance" };
-        public static readonly LocalizationsIds PracticeCardSmudgingCityDistance = new() { value = "practice_card_smudging_city_distance" };
-        public static readonly LocalizationsIds PracticeCardSmudgingChessboardDistance = new() { value = "practice_card_smudging_chessboard_distance" };
-        public static readonly LocalizationsIds PracticeCardFilteringErosion = new() { value = "practice_card_filtering_erosion" };
-        public static readonly LocalizationsIds PracticeCardZhangSuenMethod = new() { value = "practice_card_zhang_suen_method" };
+        public static readonly LocalizationsIds CardSmudgingEuclideanDistance = new() { value = "card_smudging_euclidean_distance" };
+        public static readonly LocalizationsIds CardSmudgingCityDistance = new() { value = "card_smudging_city_distance" };
+        public static readonly LocalizationsIds CardSmudgingChessboardDistance = new() { value = "card_smudging_chessboard_distance" };
+        public static readonly LocalizationsIds CardFilteringErosion = new() { value = "card_filtering_erosion" };
+        public static readonly LocalizationsIds CardFilteringDilation = new() { value = "card_filtering_dilation" };
+        public static readonly LocalizationsIds CardZhangSuenMethod = new() { value = "card_zhang_suen_method" };
         
         
         public static readonly LocalizationsIds WikiCardImagesAndDefinitionName = new() { value = "wiki_card_images_and_definition_name" };
@@ -53,8 +54,18 @@ namespace Localization
         public static readonly LocalizationsIds WikiCardContourDetectionName = new() { value = "wiki_card_contour_detection_name" };
         public static readonly LocalizationsIds WikiCardContourDetectionDescription = new() { value = "wiki_card_contour_detection_description" };
 
+        public static readonly LocalizationsIds TestCardConceptAndDefinition = new() { value = "test_card_concept_and_definition" };
+        public static readonly LocalizationsIds TestCardBinaryImages = new() { value = "test_card_binary_images" };
+        public static readonly LocalizationsIds TestCardGrayscaleImages= new() { value = "test_card_grayscale_images" };
+        public static readonly LocalizationsIds TestCardBinarizationOfGrayscaleImages= new() { value = "test_card_binarization_of_grayscale_images" };
+        public static readonly LocalizationsIds TestCardColorModels= new() { value = "test_card_color_models" };
+        public static readonly LocalizationsIds TestCardImageFiltering= new() { value = "test_card_image_filtering" };
+        public static readonly LocalizationsIds TestCardSegmentation = new() { value = "test_card_segmentation" };
+        public static readonly LocalizationsIds TestCardTextureAnalysis = new() { value = "test_card_texture_analysis" };
+        public static readonly LocalizationsIds TestCardImageThinning = new() { value = "test_card_image_thinning" };
 
-        
+
+
 
         public static LocalizationsIds[] GetAllValues()
         {
@@ -65,9 +76,52 @@ namespace Localization
                 MainMenuSettingsButton,
                 MainMenuTheoryButton,
                 MainMenuTestButton,
-                MainMenuAboutButton
+                MainMenuAboutButton,
+                CardSmudgingEuclideanDistance,
+                CardSmudgingCityDistance,
+                CardSmudgingChessboardDistance,
+                CardFilteringErosion,
+                CardFilteringDilation,
+                CardZhangSuenMethod,
+                WikiCardImagesAndDefinitionName,
+                WikiCardImagesAndDefinitionDescription,
+                WikiCardBinaryImagesName,
+                WikiCardBinaryImagesDescription,
+                WikiCardGrayscaleImagesName,
+                WikiCardGrayscaleImagesDescription,
+                WikiCardBinarizationGrayscaleImagesName,
+                WikiCardBinarizationGrayscaleImagesDescription,
+                WikiCardColorModelsName,
+                WikiCardColorModelsDescription,
+                WikiCardImageContrastAdjustmentName,
+                WikiCardImageContrastAdjustmentDescription,
+                WikiCardImageThinningName,
+                WikiCardImageThinningDescription,
+                WikiCardImageFilteringName,
+                WikiCardImageFilteringDescription,
+                WikiCardWaveletTransformName,
+                WikiCardWaveletTransformDescription,
+                WikiCardSegmentationName,
+                WikiCardSegmentationDescription,
+                WikiCardEdgeEnhancementName,
+                WikiCardEdgeEnhancementDescription,
+                WikiCardTextureAnalysis,
+                WikiCardTextureAnalysisDescription,
+                WikiCardContourDetectionName,
+                WikiCardContourDetectionDescription,
+                TestCardConceptAndDefinition,
+                TestCardBinaryImages,
+                TestCardGrayscaleImages,
+                TestCardBinarizationOfGrayscaleImages,
+                TestCardColorModels,
+                TestCardImageFiltering,
+                TestCardSegmentation,
+                TestCardTextureAnalysis,
+                TestCardImageThinning
             };
         }
+        
+
     }
 
 }

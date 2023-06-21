@@ -1,5 +1,6 @@
 
 using System;
+using Localization;
 
 namespace Data.CardsModel
 {
@@ -7,6 +8,6 @@ namespace Data.CardsModel
     [Serializable]
     public class CardModel
     {
-        public string name;
+        public LocalizationsIds name;
     }
 }

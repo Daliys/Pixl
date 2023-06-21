@@ -1,4 +1,5 @@
 using System;
+using Localization;
 using UnityEngine;
 
 namespace Data.CardsModel
@@ -6,7 +7,7 @@ namespace Data.CardsModel
     [Serializable]
     public class CardModelWiki : CardModel
     {
-        public string description;
+        public LocalizationsIds description;
         public Sprite sprite;
     }
 }

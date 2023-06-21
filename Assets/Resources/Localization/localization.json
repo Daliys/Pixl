@@ -25,36 +25,37 @@
     "es": "acerca de la aplicación"
   },
   
-  "practice_card_smudging_euclidean_distance": {
+  "card_smudging_euclidean_distance": {
     "en": "image smudging using Euclidean distance",
     "ru": "растушёвка изображения при помощи евклидова расстояния",
     "es": "difuminado de imágenes utilizando la distancia euclidiana"
   },
-  "practice_card_smudging_city_distance": {
+  "card_smudging_city_distance": {
     "en": "image smudging using city block distance",
     "ru": "растушёвка изображения при помощи городского расстояния",
     "es": "difuminado de imágenes utilizando la distancia de bloque de ciudad"
   },
-  "practice_card_smudging_chessboard_distance": {
+  "card_smudging_chessboard_distance": {
     "en": "image smudging using chessboard distance",
     "ru": "растушёвка изображения при помощи шахматного расстояния",
     "es": "difuminado de imágenes utilizando la distancia de ajedrez"
   },
-  "practice_card_filtering_erosion": {
+  "card_filtering_erosion": {
     "en": "image filtering using erosion",
     "ru": "фильтрация изображения при помощи эрозии",
     "es": "filtrado de imágenes utilizando erosión"
   },
-  "practice_card_filtering_dilation": {
+  "card_filtering_dilation": {
     "en": "image filtering using dilation",
     "ru": "фильтрация изображения при помощи расширения",
     "es": "filtrado de imágenes utilizando dilatación"
   },
-  "practice_card_zhang_suen_method": {
+  "card_zhang_suen_method": {
     "en": "image thinning using the Zhang-Suen method",
     "ru": "утоньшение изображения методом Зонга-Суня",
     "es": "adelgazamiento de imágenes utilizando el método de Zhang-Suen"
   },
+  
   
   
   "wiki_card_images_and_definition_name": {
@@ -186,6 +187,54 @@
     "en": "algorithm \"beetle\"; scanning algorithm",
     "ru": "алгоритм «жук»; сканирующий алгоритм",
     "es": "algoritmo \"escarabajo\"; algoritmo de escaneo"
+  },
+  
+  
+  
+  "test_card_concept_and_definition": {
+    "en": "image. Key concepts and definitions",
+    "ru": "изображение. основные понятия и определения",
+    "es": "imagen. Conceptos clave y definiciones"
+  },
+  "test_card_binary_images": {
+    "en": "binary images",
+    "ru": "бинарные изображения",
+    "es": "imágenes binarias"
+  },
+  "test_card_grayscale_images": {
+    "en": "grayscale images",
+    "ru": "полутоновые изображения",
+    "es": "imágenes en escala de grises"
+  },
+  "test_card_binarization_of_grayscale_images": {
+    "en": "binarization of grayscale images",
+    "ru": "бинаризация полутоновых изображений",
+    "es": "binarización de imágenes en escala de grises"
+  },
+  "test_card_color_models": {
+    "en": "color models. Image contrast enhancement",
+    "ru": "цветовые модели. изменение контраста изображений",
+    "es": "modelos de color. Mejora del contraste de imágenes"
+  },
+  "test_card_image_filtering": {
+    "en": "image filtering",
+    "ru": "фильтрация изображения",
+    "es": "filtrado de imágenes"
+  },
+  "test_card_segmentation": {
+    "en": "segmentation. Edge highlighting",
+    "ru": "сегментация. подчёркивание границ",
+    "es": "segmentación. Resaltado de bordes"
+  },
+  "test_card_texture_analysis": {
+    "en": "texture analysis. Contour extraction",
+    "ru": "текстурный анализ. выделение контуров",
+    "es": "análisis de texturas. Extracción de contornos"
+  },
+  "test_card_image_thinning": {
+    "en": "image thinning",
+    "ru": "утоньшение  изображения",
+    "es": "adelgazamiento de imágenes"
   }
   
   
