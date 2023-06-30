@@ -7,7 +7,7 @@ namespace Localization
     /// This class is used to store localization ids in the inspector
     /// </summary>
     [CustomPropertyDrawer(typeof(LocalizationsIds))]
-    public class LocalizationsIdsDrawer : PropertyDrawer
+    public class LocalizationsIdsDrawer : UnityEditor.PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {

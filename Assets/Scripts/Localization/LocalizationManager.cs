@@ -77,7 +77,7 @@ namespace Localization
             {
                 if (languageValues.ContainsKey(instance.currentLanguage.ToString()))
                 {
-                    value = languageValues[instance.currentLanguage.ToString()];
+                    value = languageValues[instance.currentLanguage.ToString()]; 
                 }
             }
 
