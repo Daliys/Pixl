@@ -1,5 +1,6 @@
+using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+
 using UnityEngine;
 
 namespace Localization
@@ -29,7 +30,9 @@ namespace Localization
         /// <summary>
         /// Current language of the game
         /// </summary>
-        public Language currentLanguage;
+        private static Language currentLanguage;
+
+        public static event Action OnLanguageChanged; 
 
         private void Awake()
         {
@@ -43,10 +46,10 @@ namespace Localization
                 return;
             }
 
+            currentLanguage = Language.en;
+            
             LoadLocalizedText();
             DontDestroyOnLoad(gameObject);
-
-            print("LocalizationManager Awake " + GetLocalizationValue("settings_menu"));
         }
 
         private static void LoadLocalizedText()
@@ -56,7 +59,7 @@ namespace Localization
 
             if (textAsset != null)
             {
-                localizedText = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, string>>>(textAsset.text);
+                localizedText = JsonUtility.FromJson<Dictionary<string, Dictionary<string, string>>>(textAsset.text);
             }
             else
             {
@@ -75,13 +78,25 @@ namespace Localization
 
             if (localizedText != null && localizedText.TryGetValue(key, out var languageValues))
             {
-                if (languageValues.ContainsKey(instance.currentLanguage.ToString()))
+                if (languageValues.ContainsKey(currentLanguage.ToString()))
                 {
-                    value = languageValues[instance.currentLanguage.ToString()]; 
+                    value = languageValues[currentLanguage.ToString()]; 
                 }
             }
 
             return value;
         }
+        
+        public static void SetLanguage(Language language)
+        {
+            currentLanguage = language;
+            OnLanguageChanged?.Invoke();
+        }
+        
+        public static Language GetCurrentLanguage()
+        {
+            return currentLanguage;
+        }
+        
     }
 }

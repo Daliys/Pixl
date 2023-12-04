@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b299933bea9041a1a847e29539ad33bf, type: 3}
+  m_Name: t3
+  m_EditorClassIdentifier: 
+  ruSprite: {fileID: 21300000, guid: 9708a08e32551453f9fd29665c2f8d5c, type: 3}
+  enSprite: {fileID: 21300000, guid: 80e9d36e2c1a24ad7bc0cbbd5a5ca4e2, type: 3}
+  esSprite: {fileID: 21300000, guid: 604b83307880a4c9584798ccfc0a6d92, type: 3}

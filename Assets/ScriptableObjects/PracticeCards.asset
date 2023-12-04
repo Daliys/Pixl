@@ -14,26 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   models:
   - name:
-      value: practice_card_smudging_euclidean_distance
+      value: card_smudging_euclidean_distance
     levelPrefab: {fileID: 1787805667241702815, guid: 7721578b93c2b4d528d07e3c9988a884, type: 3}
-    imageWiki: {fileID: 21300000, guid: 2fdeb8614049949feaf0a0438a2b708d, type: 3}
+    theoryContent: {fileID: 11400000, guid: 6376cf957f24e48f195151866acfd982, type: 2}
   - name:
-      value: practice_card_smudging_city_distance
+      value: card_smudging_city_distance
     levelPrefab: {fileID: 7589957389886192321, guid: 395f7e115b4384e35aad81a0d8459477, type: 3}
-    imageWiki: {fileID: 21300000, guid: affcaffe966b94630930ae7926e33f8c, type: 3}
+    theoryContent: {fileID: 11400000, guid: d7e07242021974ce286d6280f191ed65, type: 2}
   - name:
-      value: practice_card_smudging_chessboard_distance
+      value: card_smudging_chessboard_distance
     levelPrefab: {fileID: 8269047233602901237, guid: 7c1daf94db5904731a6b47a95278e910, type: 3}
-    imageWiki: {fileID: 21300000, guid: 77d525e0160044c4e84802d3fa15ffa4, type: 3}
+    theoryContent: {fileID: 11400000, guid: 4fabbaf644dc045f0941e99451a8cf2a, type: 2}
   - name:
-      value: practice_card_filtering_erosion
+      value: card_filtering_erosion
     levelPrefab: {fileID: 8667802849231514275, guid: 615a237f73fb8444c8ef86faf8913500, type: 3}
-    imageWiki: {fileID: 21300000, guid: a75a140a5efd944f4b87685070b2c20e, type: 3}
+    theoryContent: {fileID: 11400000, guid: 8c0d5173f64d84048bb57958c03f56bc, type: 2}
   - name:
-      value: practice_card_filtering_dilation
+      value: card_filtering_dilation
     levelPrefab: {fileID: 8463457300889459085, guid: df87ca98898714cef87737d3896d0e2d, type: 3}
-    imageWiki: {fileID: 21300000, guid: a37e6337cc8cd43948240de533218015, type: 3}
+    theoryContent: {fileID: 11400000, guid: d7cc35bdc5fd646009ffc9ed14ad8179, type: 2}
   - name:
-      value: practice_card_zhang_suen_method
+      value: card_zhang_suen_method
     levelPrefab: {fileID: 7159570888057919963, guid: 2981cb6012b1b49c5ae441f10f87c8a8, type: 3}
-    imageWiki: {fileID: 21300000, guid: 57b80b3a80cff4df9a49789ec231e7cf, type: 3}
+    theoryContent: {fileID: 11400000, guid: e209c214f1be247358632b230627f77b, type: 2}

@@ -26,9 +26,8 @@ namespace MenuUI
             foreach (var model in wikiCards.models)
             {
                 GameObject gm = Instantiate(cardPrefab, contentPanel.transform);
-                CardWithDescription card = gm.GetComponent<CardWithDescription>();
-                card.Initialize(OnButtonCardClicked,i, LocalizationManager.GetLocalizationValue(model.name.value), 
-                    LocalizationManager.GetLocalizationValue(model.description.value));
+                CardBasic card = gm.GetComponent<CardBasic>();
+                card.Initialize(OnButtonCardClicked,i, LocalizationManager.GetLocalizationValue(model.name.value));
                 i++;
             }
 
@@ -38,7 +37,7 @@ namespace MenuUI
         protected override void OnButtonCardClicked(int index)
         {
             wikiPage.SetActive(true);
-            wikiPageContentImage.sprite = wikiCards.models[index-1].sprite;
+            wikiPageContentImage.sprite = wikiCards.models[index-1].theoryContent.GetSpriteByLanguage(LocalizationManager.GetCurrentLanguage());
             wikiPageContentImage.SetNativeSize();
         }
 

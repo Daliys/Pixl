@@ -19,6 +19,12 @@ namespace Localization
 
         private void Start()
         {
+            ChangeLanguage();
+            LocalizationManager.OnLanguageChanged += OnLanguageChanged;
+        }
+
+        private void ChangeLanguage()
+        {
             switch (elementType)
             {
                 case ElementType.Text:
@@ -30,6 +36,18 @@ namespace Localization
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+
+        }
+        
+
+        private void OnLanguageChanged()
+        {
+            ChangeLanguage();
+        }
+        
+        private void OnDestroy()
+        {
+            LocalizationManager.OnLanguageChanged -= OnLanguageChanged;
         }
     }
 }

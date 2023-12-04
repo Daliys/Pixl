@@ -1,4 +1,5 @@
 using System;
+using ScriptableObjects;
 using UnityEngine;
 
 namespace Data.CardsModel
@@ -7,6 +8,6 @@ namespace Data.CardsModel
     public class CardModelPractice : CardModel
     {
         public GameObject levelPrefab;
-        public Sprite imageWiki;
+        public TheoryContent theoryContent;
     }
 }

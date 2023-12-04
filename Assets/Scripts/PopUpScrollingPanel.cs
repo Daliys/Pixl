@@ -4,7 +4,6 @@ using Grid.GridItems;
 using PlayerLevel;
 using UI;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PopUpScrollingPanel : MonoBehaviour
 {
@@ -13,7 +12,7 @@ public class PopUpScrollingPanel : MonoBehaviour
     [SerializeField] private UILevel1 level;
 
     private List<ScrollingElement> scrollingElements;
-    private bool isNegative = false;
+    private bool isNegative;
 
     private ScrollingElement activeScrollingElement;
 

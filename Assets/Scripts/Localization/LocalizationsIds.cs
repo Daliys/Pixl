@@ -1,5 +1,4 @@
-using UnityEngine;
-using UnityEditor;
+using System;
 
 namespace Localization
 {
@@ -20,6 +19,7 @@ namespace Localization
         public static readonly LocalizationsIds MainMenuTheoryButton = new() { value = "main_menu_theory_button" };
         public static readonly LocalizationsIds MainMenuTestButton = new() { value = "main_menu_test_button" };
         public static readonly LocalizationsIds MainMenuAboutButton = new() { value = "main_menu_about_button" };
+        public static readonly LocalizationsIds MainMenuSettingsLanguage = new() { value = "main_menu_settings_language" };
         
         
         public static readonly LocalizationsIds CardSmudgingEuclideanDistance = new() { value = "card_smudging_euclidean_distance" };
@@ -53,6 +53,7 @@ namespace Localization
                 MainMenuTheoryButton,
                 MainMenuTestButton,
                 MainMenuAboutButton,
+                MainMenuSettingsLanguage,
                 CardSmudgingEuclideanDistance,
                 CardSmudgingCityDistance,
                 CardSmudgingChessboardDistance,

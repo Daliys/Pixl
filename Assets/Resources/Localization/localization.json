@@ -24,6 +24,17 @@
     "ru": "о приложении",
     "es": "acerca de la aplicación"
   },
+  "main_menu_settings_button": {
+    "en": "settings",
+    "ru": "настройки",
+    "es": "ajustes"
+  },
+  "main_menu_settings_language": {
+    "en": "language",
+    "ru": "язык",
+    "es": "idioma"
+  },
+  
   
   "card_smudging_euclidean_distance": {
     "en": "image smudging using Euclidean distance",

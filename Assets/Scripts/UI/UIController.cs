@@ -51,7 +51,7 @@ namespace UI
         public void OnButtonWikiClicked()
         {
             wikiPanel.SetActive(true);
-            wikiImage.sprite = cardModelPractice.imageWiki;
+            wikiImage.sprite = cardModelPractice.theoryContent.GetSpriteByLanguage(Localization.LocalizationManager.GetCurrentLanguage());
             wikiImage.preserveAspect = true;
             wikiImage.SetNativeSize();
             

@@ -14,67 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   models:
   - name:
-      value: wiki_card_images_and_definition_name
-    description:
-      value: wiki_card_images_and_definition_description
-    sprite: {fileID: 21300000, guid: 400c2740210314dce96f85c172725fb7, type: 3}
+      value: card_smudging_euclidean_distance
+    theoryContent: {fileID: 11400000, guid: 6376cf957f24e48f195151866acfd982, type: 2}
   - name:
-      value: wiki_card_binary_images_name
-    description:
-      value: wiki_card_binary_images_description
-    sprite: {fileID: 21300000, guid: 076986feccf4b43e29698d4af87391ba, type: 3}
+      value: card_smudging_city_distance
+    theoryContent: {fileID: 11400000, guid: d7e07242021974ce286d6280f191ed65, type: 2}
   - name:
-      value: wiki_card_grayscale_images_name
-    description:
-      value: wiki_card_grayscale_images_description
-    sprite: {fileID: 21300000, guid: c6d78eef67890464eaf38430d2a95d52, type: 3}
+      value: card_smudging_chessboard_distance
+    theoryContent: {fileID: 11400000, guid: 4fabbaf644dc045f0941e99451a8cf2a, type: 2}
   - name:
-      value: wiki_card_binarization_grayscale_images_name
-    description:
-      value: wiki_card_binarization_grayscale_images_description
-    sprite: {fileID: 21300000, guid: 7cf0eb73681304b4088f0ce53c7b3d07, type: 3}
+      value: card_filtering_erosion
+    theoryContent: {fileID: 11400000, guid: 8c0d5173f64d84048bb57958c03f56bc, type: 2}
   - name:
-      value: wiki_card_color_models_name
-    description:
-      value: wiki_card_color_models_description
-    sprite: {fileID: 21300000, guid: 91286c86533d54adb8af213913519a0a, type: 3}
+      value: card_filtering_dilation
+    theoryContent: {fileID: 11400000, guid: d7cc35bdc5fd646009ffc9ed14ad8179, type: 2}
   - name:
-      value: wiki_card_image_contrast_adjustment_name
-    description:
-      value: wiki_card_image_contrast_adjustment_description
-    sprite: {fileID: 21300000, guid: 42a158fdd78f049d9ba866baa236323f, type: 3}
-  - name:
-      value: wiki_card_image_thinning_name
-    description:
-      value: wiki_card_image_thinning_description
-    sprite: {fileID: 21300000, guid: 0d99cf7a47f3b46ae9161d50463097aa, type: 3}
-  - name:
-      value: wiki_card_image_filtering_name
-    description:
-      value: wiki_card_image_filtering_description
-    sprite: {fileID: 21300000, guid: 9e24070ed22c04bfa95236f04373dad9, type: 3}
-  - name:
-      value: wiki_card_wavelet_transform_name
-    description:
-      value: wiki_card_wavelet_transform_description
-    sprite: {fileID: 21300000, guid: a7ef163b2f4404f568c930b21703ac19, type: 3}
-  - name:
-      value: wiki_card_segmentation_name
-    description:
-      value: wiki_card_segmentation_description
-    sprite: {fileID: 21300000, guid: 4c36c326a8e524221b647916a4cf9a2d, type: 3}
-  - name:
-      value: wiki_card_edge_enhancement_name
-    description:
-      value: wiki_card_edge_enhancement_description
-    sprite: {fileID: 21300000, guid: a474cf9f3a08d4fc887f137927fa8b50, type: 3}
-  - name:
-      value: wiki_card_texture_analysis
-    description:
-      value: wiki_card_texture_analysis_description
-    sprite: {fileID: 21300000, guid: cbbd6add012094b8e84b793d8bdad4a4, type: 3}
-  - name:
-      value: wiki_card_contour_detection_name
-    description:
-      value: wiki_card_contour_detection_description
-    sprite: {fileID: 21300000, guid: 4af7bfdfa37d94064b3180ef89b5b11b, type: 3}
+      value: card_zhang_suen_method
+    theoryContent: {fileID: 11400000, guid: e209c214f1be247358632b230627f77b, type: 2}
