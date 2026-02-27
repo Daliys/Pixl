@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 
 using UnityEngine;
+using Newtonsoft.Json;
 
 namespace Localization
 {
@@ -59,7 +60,7 @@ namespace Localization
 
             if (textAsset != null)
             {
-                localizedText = JsonUtility.FromJson<Dictionary<string, Dictionary<string, string>>>(textAsset.text);
+                localizedText = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, string>>>(textAsset.text);
             }
             else
             {
