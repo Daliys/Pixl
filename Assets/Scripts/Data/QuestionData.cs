@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
+using Localization;
 
 namespace Data
 {
     [Serializable]
     public class QuestionData
     {
-        public string questionText;
+        public LocalizationsIds questionText;
         public Sprite questionImage;
         public AnswerOption[] answerOptions;
         public int correctAnswerIndex;
@@ -15,7 +16,7 @@ namespace Data
     [Serializable]
     public class AnswerOption
     {
-        public string answerText;
+        public LocalizationsIds answerText;
         public Sprite answerImage;
     }
 }

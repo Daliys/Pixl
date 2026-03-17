@@ -1,5 +1,4 @@
 using Data;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace ScriptableObjects
@@ -7,7 +6,7 @@ namespace ScriptableObjects
     [CreateAssetMenu(fileName = "QuestionsData", menuName = "Custom/Question Data")]
     public class QuestionsDataList : ScriptableObject
     {
-        [Serialize]
+        [SerializeField]
         public QuestionData[] questions;
     }
 }

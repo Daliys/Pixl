@@ -8,6 +8,11 @@ namespace MenuUI
     {
         [SerializeField] private TestCards testCards;
         [SerializeField] private GameObject testPage;
+
+        private void Start()
+        {
+            Initialize();
+        }
         
         public override void Initialize()
         {

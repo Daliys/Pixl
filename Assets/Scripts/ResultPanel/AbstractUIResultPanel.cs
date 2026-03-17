@@ -2,6 +2,7 @@ using Data;
 using Grid.GridData;
 using TMPro;
 using UnityEngine;
+using Localization;
 
 namespace ResultPanel
 {
@@ -18,7 +19,7 @@ namespace ResultPanel
         
         public virtual void InitializeStartPanel(ResultStatus status)
         {
-            header.text = "результат";
+            header.text = LocalizationManager.GetLocalizationValue(LocalizationsIds.ResultHeader.value);
             backButton.SetActive(false);
             againButton.SetActive(true);
 
@@ -26,7 +27,7 @@ namespace ResultPanel
             {
                 header.color = whiteColor;
 
-                description1.text = "все верно";
+                description1.text = LocalizationManager.GetLocalizationValue(LocalizationsIds.ResultAllCorrect.value);
                 description1.color = whiteColor;
                 description2.enabled = false;
             }
@@ -34,11 +35,11 @@ namespace ResultPanel
             {
                 header.color = yellowColor;
 
-                description1.text = "допущена ошибка";
+                description1.text = LocalizationManager.GetLocalizationValue(LocalizationsIds.ResultMistakeMade.value);
                 description1.color = yellowColor;
 
                 description2.enabled = true;
-                description2.text = "Ошибка обозначена жёлтым пикселем '!' \nДля просмотра нажмите на него";
+                description2.text = LocalizationManager.GetLocalizationValue(LocalizationsIds.ResultExplanation2.value);
                 description2.color = whiteColor;
             }
         }

@@ -7,7 +7,7 @@ namespace ScriptableObjects
     [CreateAssetMenu(fileName = "wikiCards", menuName = "Custom/Wiki Cards")]
     public class WikiCards : ScriptableObject
     {
-        [Serialize]
+        [SerializeField]
         public CardModelWiki[] models;
     }
 }

@@ -3,6 +3,7 @@ using Grid.GridData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Localization;
 
 namespace ResultPanel
 {
@@ -35,14 +36,13 @@ namespace ResultPanel
             
                 header.color = whiteColor;
             
-                description1.text = "допущена ошибка";
+                description1.text = LocalizationManager.GetLocalizationValue(LocalizationsIds.ResultMistakeMade.value);
                 description1.color = yellowColor;
 
-                description2.text =
-                    "В выбранном поле вы ввели неверный результат, вместо этого необходимо было указать следующее значение:";
+                description2.text = LocalizationManager.GetLocalizationValue(LocalizationsIds.ResultMistakeDescription1.value);
                 description2.color = whiteColor;
 
-                bottomExplanation.text = "Пиксель жёлтого цвета указывает \nна ближайший противоположный пиксель";
+                bottomExplanation.text = LocalizationManager.GetLocalizationValue(LocalizationsIds.ResultExplanation1.value);
                 bottomExplanation.color = yellowColor;
                 bottomExplanation.enabled = true;
             

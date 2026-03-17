@@ -9,71 +9,180 @@
     "ru": "практика",
     "es": "práctica"
   },
+  "main_menu_settings_button": {
+    "en": "settings",
+    "ru": "настройки",
+    "es": "ajustes"
+  },
   "main_menu_theory_button": {
     "en": "theory",
     "ru": "теория",
     "es": "teoría"
   },
   "main_menu_test_button": {
-    "en": "test",
+    "en": "testing",
     "ru": "тестирование",
     "es": "prueba"
   },
   "main_menu_about_button": {
     "en": "about app",
     "ru": "о приложении",
-    "es": "acerca de la aplicación"
-  },
-  "main_menu_settings_button": {
-    "en": "settings",
-    "ru": "настройки",
-    "es": "ajustes"
+    "es": "sobre la aplicación"
   },
   "main_menu_settings_language": {
     "en": "language",
     "ru": "язык",
     "es": "idioma"
   },
-  
-  
+  "correct": {
+    "en": "correct",
+    "ru": "верно",
+    "es": "correcto"
+  },
+  "incorrect": {
+    "en": "incorrect",
+    "ru": "неверно",
+    "es": "incorrecto"
+  },
+  "menu": {
+    "en": "menu",
+    "ru": "меню",
+    "es": "menú"
+  },
+  "algorithm": {
+    "en": "algorithm",
+    "ru": "алгоритм",
+    "es": "algoritmo"
+  },
+  "check": {
+    "en": "check",
+    "ru": "проверить",
+    "es": "comprobar"
+  },
+  "repeat": {
+    "en": "repeat",
+    "ru": "повторить",
+    "es": "repetir"
+  },
+  "t1_smudging": {
+    "en": "smudging",
+    "ru": "растушёвка",
+    "es": "difuminado"
+  },
+  "t1_euclidean_distance": {
+    "en": "Euclidean distance",
+    "ru": "евклидово расстояние",
+    "es": "distancia euclidiana"
+  },
+  "t1_binary_to_halftone": {
+    "en": "conversion of binary image to halftone",
+    "ru": "Перевод бинарного изображения в полутоновое",
+    "es": "conversión de imagen binaria a medio tono"
+  },
+  "t2_city_distance": {
+    "en": "city distance",
+    "ru": "городское расстояние",
+    "es": "distancia de ciudad"
+  },
+  "t2_city_distance_description": {
+    "en": "this type of distance is known as city block distance — it measures distance not by the shortest straight line, but by blocks, and the path does not matter here.",
+    "ru": "это тот вид расстояния известен как расстояние городских кварталов — он измеряет дистанцию не по кратчайшей прямой, а по блокам, причём траектория здесь не имеет значения.",
+    "es": "este tipo de distancia se conoce como distancia de bloques de ciudad: mide la distancia no por la línea recta más corta, sino por bloques, y la trayectoria no importa aquí."
+  },
+  "t3_chessboard_distance": {
+    "en": "chessboard distance",
+    "ru": "шахматное расстояние",
+    "es": "distancia de ajedrez"
+  },
+  "t3_chessboard_distance_description": {
+    "en": "Chebyshev distance is also known as chessboard distance. To understand the principle of such a metric, you need to imagine a king on a chessboard — he can move in all directions: forward, backward, left, right and diagonally.",
+    "ru": "Расстояние Чебышёва известно ещё как расстояние шахматной доски. Чтобы понять принцип такой метрики, нужно представить короля на шахматной доске — он может ходить во всех направлениях: вперёд, назад, влево, вправо и по диагонали.",
+    "es": "La distancia de Chebyshev también se conoce como distancia de tablero de ajedrez. Para entender el principio de tal métrica, hay que imaginar a un rey en un tablero de ajedrez: puede moverse en todas las direcciones: adelante, atrás, izquierda, derecha y en diagonal."
+  },
+  "t4_thinning": {
+    "en": "thinning",
+    "ru": "утоньшение",
+    "es": "adelgazamiento"
+  },
+  "t4_zhang_suen_method": {
+    "en": "Zhang-Suen method",
+    "ru": "метод Зонга-Суня",
+    "es": "método de Zhang-Suen"
+  },
+  "t4_mark_removal_description": {
+    "en": "pixels that need to be marked for removal are marked in yellow",
+    "ru": "пиксели, которые необходимо пометить на удаление, помечаются жёлтым цветом",
+    "es": "los píxeles que deben marcarse para su eliminación se marcan en amarillo"
+  },
+  "t5_filtering": {
+    "en": "filtering",
+    "ru": "фильтрация",
+    "es": "filtrado"
+  },
+  "t5_erosion": {
+    "en": "erosion",
+    "ru": "эрозия",
+    "es": "erosión"
+  },
+  "t5_erosion_description": {
+    "en": "Erosion is a morphological operation used to reduce the size of a foreground object",
+    "ru": "Эрозия — это морфологическая операция, используемая для уменьшения размера объекта переднего плана",
+    "es": "La erosión es una operación morfológica utilizada para reducir el tamaño de un objeto de primer plano"
+  },
+  "t5_erosion_leave_pixels_description": {
+    "en": "Pixels that need to be left on the image as a result of erosion are marked with a dot",
+    "ru": "Пиксели, которые необходимо оставить на изображении в результате эрозии, помечаются точкой",
+    "es": "Los píxeles que deben dejarse en la imagen como resultado de la erosión se marcan con un punto"
+  },
+  "t6_expansion": {
+    "en": "dilation",
+    "ru": "расширение",
+    "es": "dilatación"
+  },
+  "t6_expansion_description": {
+    "en": "Dilation is a morphological operation used to increase the size of a foreground object",
+    "ru": "Расширение — это морфологическая операция, используемая для увеличения размера объекта переднего плана",
+    "es": "La dilatación es una operación morfológica utilizada para aumentar el tamaño de un objeto de primer plano"
+  },
+  "t6_expansion_add_pixels_description": {
+    "en": "Pixels that need to be added to the image as a result of expansion are marked with a dot",
+    "ru": "Пиксели, которые необходимо добавить на изображение в результате расширения, помечаются точкой",
+    "es": "Los píxeles que deben añadirse a la imagen como resultado de la expansión se marcan con un punto"
+  },
   "card_smudging_euclidean_distance": {
-    "en": "image smudging using Euclidean distance",
-    "ru": "растушёвка изображения при помощи евклидова расстояния",
-    "es": "difuminado de imágenes utilizando la distancia euclidiana"
+    "en": "smudging. Euclidean distance",
+    "ru": "растушёвка. Евклидово расстояние",
+    "es": "difuminado. distancia euclidiana"
   },
   "card_smudging_city_distance": {
-    "en": "image smudging using city block distance",
-    "ru": "растушёвка изображения при помощи городского расстояния",
-    "es": "difuminado de imágenes utilizando la distancia de bloque de ciudad"
+    "en": "smudging. City distance",
+    "ru": "растушёвка. Городское расстояние",
+    "es": "difuminado. Distancia de la ciudad"
   },
   "card_smudging_chessboard_distance": {
-    "en": "image smudging using chessboard distance",
-    "ru": "растушёвка изображения при помощи шахматного расстояния",
-    "es": "difuminado de imágenes utilizando la distancia de ajedrez"
+    "en": "smudging. Chessboard distance",
+    "ru": "растушёвка. Шахматное расстояние",
+    "es": "difuminado. Distancia del tablero de ajedrez"
   },
   "card_filtering_erosion": {
-    "en": "image filtering using erosion",
-    "ru": "фильтрация изображения при помощи эрозии",
-    "es": "filtrado de imágenes utilizando erosión"
+    "en": "filtering. Erosion",
+    "ru": "фильтрация. Эрозия",
+    "es": "filtrado. erosión"
   },
   "card_filtering_dilation": {
-    "en": "image filtering using dilation",
-    "ru": "фильтрация изображения при помощи расширения",
-    "es": "filtrado de imágenes utilizando dilatación"
+    "en": "filtering. Dilation",
+    "ru": "фильтрация. Дилатация",
+    "es": "filtrado. dilatación"
   },
   "card_zhang_suen_method": {
-    "en": "image thinning using the Zhang-Suen method",
-    "ru": "утоньшение изображения методом Зонга-Суня",
-    "es": "adelgazamiento de imágenes utilizando el método de Zhang-Suen"
+    "en": "thinning. Zhang-Suen method",
+    "ru": "утоньшение. Метод Зонга-Суня",
+    "es": "adelgazamiento. Método Zhang-Suen"
   },
-  
-  
-  
-  
   "test_card_concept_and_definition": {
-    "en": "image. Key concepts and definitions",
-    "ru": "изображение. основные понятия и определения",
-    "es": "imagen. Conceptos clave y definiciones"
+    "en": "concept and definition",
+    "ru": "понятия и определения",
+    "es": "concepto y definición"
   },
   "test_card_binary_images": {
     "en": "binary images",
@@ -91,9 +200,9 @@
     "es": "binarización de imágenes en escala de grises"
   },
   "test_card_color_models": {
-    "en": "color models. Image contrast enhancement",
-    "ru": "цветовые модели. изменение контраста изображений",
-    "es": "modelos de color. Mejora del contraste de imágenes"
+    "en": "color models. Contrast change",
+    "ru": "цветовые модели. изменение контраста",
+    "es": "modelos de color. cambio de contraste"
   },
   "test_card_image_filtering": {
     "en": "image filtering",
@@ -112,10 +221,1832 @@
   },
   "test_card_image_thinning": {
     "en": "image thinning",
-    "ru": "утоньшение  изображения",
-    "es": "adelgazamiento de imágenes"
+    "ru": "утоньшение изображения",
+    "es": "adelgazamiento de imagen"
+  },
+  "about_app_title": {
+    "en": "about app",
+    "ru": "о приложении",
+    "es": "sobre la aplicación"
+  },
+  "about_app_description": {
+    "en": "This application is a trainer for the discipline \"Methods and algorithms of image processing\".\n\nThe application contains theoretical material for each of the topics of this discipline, and also implements the possibility of applying the studied material in practice and monitoring knowledge on the studied topics.\n\nIn the <b>\"theory\"</b> section, the user has the opportunity to obtain theoretical information necessary for understanding the discipline.\n\nIn the <b>\"practice\"</b> section, the possibility of applying the studied methods and algorithms of image processing in practice is implemented.\n\nIn the <b>\"testing\"</b> section there are test tasks that help users check their knowledge and find out how well the studied material has been mastered.\n\nThe application has an intuitively understandable graphical interface and is an indispensable assistant for students when studying the discipline \"Methods and algorithms of image processing\".",
+    "ru": "Данное приложение является тренажёром по дисциплине “Методы и алгоритмы обработки изображений”.\n\nВ приложении собран теоретический материал по каждой из тем данной дисциплины, а также реализована возможность применения изученного материала на практике и контроля знаний по изученным темам.\n\nВ разделе <b>“теория”</b> у пользователя есть возможность получить теоретические сведения, необходимые для понимания дисциплины.\n\nВ разделе <b>“практика”</b> реализована возможность применять изученные методы и алгоритмы обработки изображений на практике.\n\nВ разделе <b>“тестирование”</b> находятся тестовые задания, которые помогают пользователям проверить свои знания и узнать, насколько хорошо усвоен изученный материал.\n\nПриложение имеет интуитивно понятный графический интерфейс и является незаменимым помощником для студентов при изучении дисциплины «Методы и алгоритмы обработки изображений».",
+    "es": "Esta aplicación es un entrenador para la disciplina \"Métodos y algoritmos de procesamiento de imágenes\".\n\nLa aplicación contiene material teórico para cada uno de los temas de esta disciplina, y también implementa la posibilidad de aplicar el material estudiado en la práctica y monitorear el conocimiento sobre los temas estudiados.\n\nEn la sección <b>\"teoría\"</b>, el usuario tiene la oportunidad de obtener información teórica necesaria para comprender la disciplina.\n\nEn la sección <b>\"práctica\"</b>, se implementa la posibilidad de aplicar los métodos y algoritmos estudiados de procesamiento de imágenes en la práctica.\n\nEn la sección <b>\"prueba\"</b>, se encuentran tareas de prueba que ayudan a los usuarios a verificar sus conocimientos y descubrir qué tan bien se ha dominado el material estudiado.\n\nLa aplicación tiene una interfaz gráfica intuitiva y es un asistente indispensable para los estudiantes al estudiar la disciplina \"Métodos y algoritmos de procesamiento de imágenes\"."
+  },
+  "test_next_question": {
+    "en": "next question",
+    "ru": "следующий вопрос",
+    "es": "siguiente pregunta"
+  },
+  "test_result": {
+    "en": "result",
+    "ru": "результат",
+    "es": "resultado"
+  },
+  "test_repeat": {
+    "en": "repeat test",
+    "ru": "повторить тест",
+    "es": "repetir prueba"
+  },
+  "result_mistake_made": {
+    "en": "mistake made",
+    "ru": "допущена ошибка",
+    "es": "error cometido"
+  },
+  "result_all_correct": {
+    "en": "all correct",
+    "ru": "все верно",
+    "es": "todo correcto"
+  },
+  "result_header": {
+    "en": "result",
+    "ru": "результат",
+    "es": "resultado"
+  },
+  "result_mistake_description_1": {
+    "en": "In the selected field you entered an incorrect result, instead it was necessary to specify the following value:",
+    "ru": "В выбранном поле вы ввели неверный результат, вместо этого необходимо было указать следующее значение:",
+    "es": "En el campo seleccionado ha introducido un resultado incorrecto, en su lugar era necesario especificar el siguiente valor:"
+  },
+  "result_explanation_1": {
+    "en": "The yellow pixel indicates \nthe nearest opposite pixel",
+    "ru": "Пиксель жёлтого цвета указывает \nна ближайший противоположный пиксель",
+    "es": "El píxel amarillo indica \nel píxel opuesto más cercano"
+  },
+  "result_explanation_2": {
+    "en": "The error is marked with a yellow pixel '!' \nClick on it to view",
+    "ru": "Ошибка обозначена жёлтым пикселем '!' \nДля просмотра нажмите на него",
+    "es": "El error está marcado con un píxel amarillo '!' \nHaga clic en él para verlo"
+  },
+  "result_mark_center": {
+    "en": "mark the center pixel",
+    "ru": "отметить центральный пиксель",
+    "es": "marcar el píxel central"
+  },
+  "result_not_mark_center": {
+    "en": "not mark the center pixel",
+    "ru": "не отмечать центральный пиксель",
+    "es": "no marcar el píxel central"
+  },
+  "result_mistake_description_prefix": {
+    "en": "In the highlighted field it was necessary to ",
+    "ru": "В выделенном поле необходимо было ",
+    "es": "En el campo resaltado era necesario "
+  },
+  "test_q1_q1_text": {
+    "en": "Select three main directions usually highlighted in monitor image processing",
+    "ru": "Выберите три основных направления, которые принято выделять при обработке изображений на мониторе",
+    "es": "Seleccione tres direcciones principales que se suelen destacar en el procesamiento de imágenes en monitor"
+  },
+  "test_q1_q1_a1_text": {
+    "en": "1. Pattern recognition \n2. Image processing \n3. Computer graphics",
+    "ru": "1.Распознавание образов \n2.Обработка изображений \n3.Компьютерная(машинная) графика ",
+    "es": "1. Reconocimiento de patrones \n2. Procesamiento de imágenes \n3. Gráficos por computadora"
+  },
+  "test_q1_q1_a2_text": {
+    "en": "1. Pattern recognition \n2. Image processing \n3. Image animation",
+    "ru": "1. Распознавание образов \n2. Обработка изображений \n3. Мультипликация изображений ",
+    "es": "1. Reconocimiento de patrones \n2. Procesamiento de imágenes \n3. Animación de imágenes"
+  },
+  "test_q1_q1_a3_text": {
+    "en": "1. Image processing \n2. Image filtering \n3. Computer graphics",
+    "ru": "1. Обработка изображения \n2. Фильтрация изображений \n3. Компьютерная(машинная) графика ",
+    "es": "1. Procesamiento de imágenes \n2. Filtrado de imágenes \n3. Gráficos por computadora"
+  },
+  "test_q1_q2_text": {
+    "en": "What is the final product of computer graphics? ",
+    "ru": "Что является конечным продуктом компьютерной графики? ",
+    "es": "¿Cuál es el producto final de los gráficos por computadora? "
+  },
+  "test_q1_q2_a1_text": {
+    "en": "Information of non-image nature ",
+    "ru": "Информация неизобразительной природы ",
+    "es": "Información de naturaleza no visual "
+  },
+  "test_q1_q2_a2_text": {
+    "en": "Image",
+    "ru": "Изображение",
+    "es": "Imagen"
+  },
+  "test_q1_q2_a3_text": {
+    "en": "Digits ",
+    "ru": "Цифры ",
+    "es": "Dígitos "
+  },
+  "test_q1_q3_text": {
+    "en": "Into what types are images divided by brightness level?",
+    "ru": "На какие виды делятся изображения по уровню яркости?",
+    "es": "¿En qué tipos se dividen las imágenes según el nivel de brillo?"
+  },
+  "test_q1_q3_a1_text": {
+    "en": "monochrome, multicolor, spectrozonal ",
+    "ru": "одноцветные, многоцветные, спектрозональные ",
+    "es": "monocromas, multicolores, espectrozonales "
+  },
+  "test_q1_q3_a2_text": {
+    "en": "binary, halftone, color",
+    "ru": "бинарные, полутоновые, цветные",
+    "es": "binarias, de medio tono, en color"
+  },
+  "test_q1_q3_a3_text": {
+    "en": "vector, raster ",
+    "ru": "векторные, растровые ",
+    "es": "vectoriales, ráster "
+  },
+  "test_q1_q4_text": {
+    "en": "In what range is the visible spectrum? ",
+    "ru": "В каком диапазоне находится видимый спектр? ",
+    "es": "¿En qué rango se encuentra el espectro visible? "
+  },
+  "test_q1_q4_a1_text": {
+    "en": "10-1000 nm. ",
+    "ru": "10-1000 нм. ",
+    "es": "10-1000 nm. "
+  },
+  "test_q1_q4_a2_text": {
+    "en": "400-700 nm.  ",
+    "ru": "400-700 нм.  ",
+    "es": "400-700 nm.  "
+  },
+  "test_q1_q4_a3_text": {
+    "en": "200-700 nm. ",
+    "ru": "200-700 нм. ",
+    "es": "200-700 nm. "
+  },
+  "test_q1_q5_text": {
+    "en": "What is the conversion of an image from vector graphics to raster called? ",
+    "ru": "Как называется перевод изображения из векторной графики в растровую? ",
+    "es": "¿Cómo se llama la conversión de una imagen de gráficos vectoriales a ráster? "
+  },
+  "test_q1_q5_a1_text": {
+    "en": "Clustering",
+    "ru": "Кластеризация",
+    "es": "Agrupamiento"
+  },
+  "test_q1_q5_a2_text": {
+    "en": "Rasterization",
+    "ru": "Растеризация",
+    "es": "Rasterización"
+  },
+  "test_q1_q5_a3_text": {
+    "en": "Vectorization",
+    "ru": "Векторизация",
+    "es": "Vectorización"
+  },
+  "test_q1_q6_text": {
+    "en": "Types of raster images: ",
+    "ru": "Типы растровых изображений: ",
+    "es": "Tipos de imágenes ráster: "
+  },
+  "test_q1_q6_a1_text": {
+    "en": "monochrome, halftone, palette, full-color",
+    "ru": "одноцветные, полутоновые, палитровые, полноцветные",
+    "es": "monocromas, de medio tono, de paleta, a todo color"
+  },
+  "test_q1_q6_a2_text": {
+    "en": "binary, halftone, color, full-color ",
+    "ru": "бинарные, полутоновые, цветные, полноцветные ",
+    "es": "binarias, de medio tono, en color, a todo color "
+  },
+  "test_q1_q6_a3_text": {
+    "en": "binary, halftone, palette, full-color",
+    "ru": "бинарные, полутоновые, палитровые, полноцветные",
+    "es": "binarias, de medio tono, de paleta, a todo color"
+  },
+  "test_q1_q7_text": {
+    "en": "Elements of a binary image are described by one bit, which takes values: ",
+    "ru": "Элементы бинарного изображения описываются одним битом, который принимает значения: ",
+    "es": "Los elementos de una imagen binaria se describen mediante un bit, que toma los valores: "
+  },
+  "test_q1_q7_a1_text": {
+    "en": "«1» and «2»",
+    "ru": "«1» и «2»",
+    "es": "«1» y «2»"
+  },
+  "test_q1_q7_a2_text": {
+    "en": "«0» and «1» ",
+    "ru": "«0» и «1» ",
+    "es": "«0» y «1» "
+  },
+  "test_q1_q7_a3_text": {
+    "en": "«0» and «255»",
+    "ru": "«0» и «255»",
+    "es": "«0» y «255»"
+  },
+  "test_q1_q8_text": {
+    "en": "Types of images by formation method:",
+    "ru": "Виды изображений по способу формирования:",
+    "es": "Tipos de imágenes por método de formación:"
+  },
+  "test_q1_q8_a1_text": {
+    "en": "color and binary ",
+    "ru": "цветные и бинарные ",
+    "es": "en color y binarias "
+  },
+  "test_q1_q8_a2_text": {
+    "en": "vector and raster",
+    "ru": "векторные и растровые",
+    "es": "vectoriales y ráster"
+  },
+  "test_q1_q8_a3_text": {
+    "en": "raster and halftone ",
+    "ru": "растровые и полутоновые ",
+    "es": "ráster y de medio tono "
+  },
+  "test_q1_q9_text": {
+    "en": "What refers to the advantages of raster graphics? ",
+    "ru": "Что относится к достоинствам растровой графики? ",
+    "es": "¿Qué se refiere a las ventajas de los gráficos ráster? "
+  },
+  "test_q1_q9_a1_text": {
+    "en": "large volume ",
+    "ru": "большой объём ",
+    "es": "gran volumen "
+  },
+  "test_q1_q9_a2_text": {
+    "en": "easy to edit, because pixels are independent",
+    "ru": "легко редактировать, т.к. пиксели независимые",
+    "es": "fácil de editar, porque los píxeles son independientes"
+  },
+  "test_q1_q9_a3_text": {
+    "en": "scales well",
+    "ru": "хорошо поддаётся масштабированию",
+    "es": "se escala bien"
+  },
+  "test_q1_q10_text": {
+    "en": "A full-color image contains information about color brightness (usually R, G, B), i.e., it can be considered as: ",
+    "ru": "Полноцветное изображение содержит информацию о яркостях цветов (обычно R, G, B), т. е. его можно рассматривать как: ",
+    "es": "Una imagen a todo color contiene información sobre los brillos de los colores (normalmente R, G, B), es decir, se puede considerar como: "
+  },
+  "test_q1_q10_a1_text": {
+    "en": "seven halftone images ",
+    "ru": "семь полутоновых изображений ",
+    "es": "siete imágenes de medio tono "
+  },
+  "test_q1_q10_a2_text": {
+    "en": "two halftone images ",
+    "ru": "два полутоновых изображений ",
+    "es": "dos imágenes de medio tono "
+  },
+  "test_q1_q10_a3_text": {
+    "en": "three halftone images ",
+    "ru": "три полутоновых изображений ",
+    "es": "tres imágenes de medio tono "
+  },
+  "test_q2_q1_text": {
+    "en": "Elements of a binary image are described by one bit, which takes values: ",
+    "ru": "Элементы бинарного изображения описываются одним битом, который принимает значения: ",
+    "es": "Los elementos de una imagen binaria se describen mediante un bit, que toma los valores: "
+  },
+  "test_q2_q1_a1_text": {
+    "en": "«1» and «2» ",
+    "ru": "«1» и «2» ",
+    "es": "«1» y «2» "
+  },
+  "test_q2_q1_a2_text": {
+    "en": "«0» and «1» ",
+    "ru": "«0» и «1» ",
+    "es": "«0» y «1» "
+  },
+  "test_q2_q1_a3_text": {
+    "en": "«0» and «255» ",
+    "ru": "«0» и «255» ",
+    "es": "«0» y «255» "
+  },
+  "test_q2_q2_text": {
+    "en": "Euclidean distance formula: ",
+    "ru": "Формула евклидова расстояния: ",
+    "es": "Fórmula de la distancia euclidiana: "
+  },
+  "test_q2_q3_text": {
+    "en": "Pixel connectivity is understood as: ",
+    "ru": "Под связностью пикселей понимается: ",
+    "es": "Por conectividad de píxeles se entiende: "
+  },
+  "test_q2_q3_a1_text": {
+    "en": "possibility of connecting them with a raster line, i.e., a sequential set of pixels ",
+    "ru": "возможность соединения их растровой линией, т. е. последовательным набором пикселей ",
+    "es": "posibilidad de conectarlos con una línea ráster, es decir, un conjunto secuencial de píxeles "
+  },
+  "test_q2_q3_a2_text": {
+    "en": "number of diagonal neighbors of the considered pixel ",
+    "ru": "количество диагональных соседей рассматриваемого пикселя ",
+    "es": "número de vecinos diagonales del píxel considerado "
+  },
+  "test_q2_q3_a3_text": {
+    "en": "number of transitions 1-0 ",
+    "ru": "число переходов 1-0 ",
+    "es": "número de transiciones 1-0 "
+  },
+  "test_q2_q4_text": {
+    "en": "Thanks to characteristic numbers, one can perform: ",
+    "ru": "Благодаря характеристическим числам можно выполнить: ",
+    "es": "Gracias a los números característicos se puede realizar: "
+  },
+  "test_q2_q4_a1_text": {
+    "en": "pixel binarization ",
+    "ru": "бинаризацию пикселей ",
+    "es": "binarización de píxeles "
+  },
+  "test_q2_q4_a2_text": {
+    "en": "pixel normalization ",
+    "ru": "нормализацию пикселей ",
+    "es": "normalización de píxeles "
+  },
+  "test_q2_q4_a3_text": {
+    "en": "pixel classification ",
+    "ru": "классификацию пикселей ",
+    "es": "clasificación de píxeles "
+  },
+  "test_q2_q5_text": {
+    "en": "One of the important definitions in a binary image is distance. What types of distances are distinguished: ",
+    "ru": "Одним из важных определений на бинарном изображении является расстояние. Какие виды расстояний выделяют: ",
+    "es": "Una de las definiciones importantes en una imagen binaria es la distancia. ¿Qué tipos de distancias se distinguen: "
+  },
+  "test_q2_q5_a1_text": {
+    "en": "Euclidean, city, chessboard  ",
+    "ru": "евклидово, городское, шахматное  ",
+    "es": "euclidiana, de ciudad, de ajedrez  "
+  },
+  "test_q2_q5_a2_text": {
+    "en": "Euclidean, simple, binary ",
+    "ru": "евклидово, простое, бинарное ",
+    "es": "euclidiana, simple, binaria "
+  },
+  "test_q2_q5_a3_text": {
+    "en": "city, chessboard, pixel-by-pixel ",
+    "ru": "городское, шахматное, попиксельное ",
+    "es": "de ciudad, de ajedrez, píxel por píxel "
+  },
+  "test_q2_q6_text": {
+    "en": "Euclidean distance as a characteristic shape has ",
+    "ru": "Евклидово расстояние в качестве характеристической формы имеет ",
+    "es": "La distancia euclidiana como forma característica tiene "
+  },
+  "test_q2_q6_a1_text": {
+    "en": "rhombus",
+    "ru": "робм",
+    "es": "rombo"
+  },
+  "test_q2_q6_a2_text": {
+    "en": "circle",
+    "ru": "круг",
+    "es": "círculo"
+  },
+  "test_q2_q6_a3_text": {
+    "en": "square",
+    "ru": "квадрат",
+    "es": "cuadrado"
+  },
+  "test_q2_q7_text": {
+    "en": "Two pixels are called connected if they ",
+    "ru": "Два пикселя называются связными, если они ",
+    "es": "Dos píxeles se llaman conectados si "
+  },
+  "test_q2_q7_a1_text": {
+    "en": "have same brightness  ",
+    "ru": "одинаковые по яркости  ",
+    "es": "tienen el mismo brillo  "
+  },
+  "test_q2_q7_a2_text": {
+    "en": "are not neighbors ",
+    "ru": "не являются соседями ",
+    "es": "no son vecinos "
+  },
+  "test_q2_q7_a3_text": {
+    "en": "are neighbors ",
+    "ru": "являются соседями ",
+    "es": "son vecinos "
+  },
+  "test_q2_q8_text": {
+    "en": "By what name is chessboard distance known? ",
+    "ru": "Под каким названием известно шахматное расстояние? ",
+    "es": "¿Con qué nombre se conoce la distancia de ajedrez? "
+  },
+  "test_q2_q8_a1_text": {
+    "en": "Chebyshev distance ",
+    "ru": "расстояние Чебышёва ",
+    "es": "distancia de Chebyshev "
+  },
+  "test_q2_q8_a2_text": {
+    "en": "Sobel distance ",
+    "ru": "расстояние Собеля ",
+    "es": "distancia de Sobel "
+  },
+  "test_q2_q8_a3_text": {
+    "en": "city distance ",
+    "ru": "городское расстояние ",
+    "es": "distancia de ciudad "
+  },
+  "test_q2_q9_text": {
+    "en": "Find A4 for pixel number 5",
+    "ru": "Найти А4 для пикселя номер 5",
+    "es": "Hallar A4 para el píxel número 5"
+  },
+  "test_q2_q9_a1_text": {
+    "en": "2",
+    "ru": "2",
+    "es": "2"
+  },
+  "test_q2_q9_a2_text": {
+    "en": "3",
+    "ru": "3",
+    "es": "3"
+  },
+  "test_q2_q9_a3_text": {
+    "en": "1",
+    "ru": "1",
+    "es": "1"
+  },
+  "test_q2_q10_text": {
+    "en": "Find A8 for pixel number 5 ",
+    "ru": "Найти A8 для пикселя номер 5 ",
+    "es": "Hallar A8 para el píxel número 5 "
+  },
+  "test_q2_q10_a1_text": {
+    "en": "2",
+    "ru": "2",
+    "es": "2"
+  },
+  "test_q2_q10_a2_text": {
+    "en": "3",
+    "ru": "3",
+    "es": "3"
+  },
+  "test_q2_q10_a3_text": {
+    "en": "1",
+    "ru": "1",
+    "es": "1"
+  },
+  "test_q3_q1_text": {
+    "en": "What characterizes halftone images in contrast to binary ones? ",
+    "ru": "Чем характеризуются полутоновые изображения в отличие от бинарных? ",
+    "es": "¿Qué caracteriza a las imágenes de medio tono a diferencia de las binarias? "
+  },
+  "test_q3_q1_a1_text": {
+    "en": "presence of yellow color in the image ",
+    "ru": "наличие жёлтого цвета на изображении ",
+    "es": "presencia de color amarillo en la imagen "
+  },
+  "test_q3_q1_a2_text": {
+    "en": "more brightness gradations ",
+    "ru": "большее количество градаций яркости ",
+    "es": "mayor número de gradaciones de brillo "
+  },
+  "test_q3_q1_a3_text": {
+    "en": "halftone image size is smaller ",
+    "ru": "размер полутонового изображения меньше ",
+    "es": "el tamaño de la imagen de medio tono es menor "
+  },
+  "test_q3_q2_text": {
+    "en": "What is the conversion of a binary image to halftone called? ",
+    "ru": "Как называют перевод бинарного изображения в полутоновое? ",
+    "es": "¿Cómo se llama la conversión de una imagen binaria a medio tono? "
+  },
+  "test_q3_q2_a1_text": {
+    "en": "binarization",
+    "ru": "бинаризация",
+    "es": "binarización"
+  },
+  "test_q3_q2_a2_text": {
+    "en": "smudging",
+    "ru": "растушёвка",
+    "es": "difuminado"
+  },
+  "test_q3_q2_a3_text": {
+    "en": "polarization",
+    "ru": "поляризация",
+    "es": "polarización"
+  },
+  "test_q3_q3_text": {
+    "en": "To avoid errors at image borders: ",
+    "ru": "Чтобы избежать погрешностей на границах изображений: ",
+    "es": "Para evitar errores en los bordes de las imágenes: "
+  },
+  "test_q3_q3_a1_text": {
+    "en": "image is expanded with zeros",
+    "ru": "изображение расширяют нулями",
+    "es": "la imagen se expande con ceros"
+  },
+  "test_q3_q3_a2_text": {
+    "en": "image borders are not processed",
+    "ru": "границы изображения не обрабатывают",
+    "es": "los bordes de la imagen no se procesan"
+  },
+  "test_q3_q3_a3_text": {
+    "en": "errors cannot be avoided  ",
+    "ru": "погрешностей никак не избежать  ",
+    "es": "los errores no se pueden evitar de ninguna manera  "
+  },
+  "test_q3_q4_text": {
+    "en": "The brightness value of each pixel when converting a binary image to halftone using Euclidean distance is defined as ",
+    "ru": "Величина яркости каждого пикселя при переводе бинарного изображения в полутоновое при помощи евклидова расстояния определяется как ",
+    "es": "El valor de brillo de cada píxel al convertir una imagen binaria a medio tono utilizando la distancia euclidiana se define como "
+  },
+  "test_q3_q4_a1_text": {
+    "en": "largest distance to the pixel opposite to it",
+    "ru": "наибольшее расстояние до противоположного ему пикселя",
+    "es": "la mayor distancia al píxel opuesto a él"
+  },
+  "test_q3_q4_a2_text": {
+    "en": "brightness of its «neighbor» on the right + 1 ",
+    "ru": "яркость его «соседа» справа +1 ",
+    "es": "brillo de su «vecino» a la derecha + 1 "
+  },
+  "test_q3_q4_a3_text": {
+    "en": "smallest distance to the pixel opposite to it ",
+    "ru": "наименьшее расстояние до противоположного ему пикселя ",
+    "es": "la menor distancia al píxel opuesto a él "
+  },
+  "test_q3_q5_text": {
+    "en": "When converting a binary image to halftone, the method used is",
+    "ru": "При переводе бинарного изображения в полутоновое используют метод",
+    "es": "Al convertir una imagen binaria a medio tono, se utiliza el método"
+  },
+  "test_q3_q5_a1_text": {
+    "en": "ships",
+    "ru": "кораблей",
+    "es": "de barcos"
+  },
+  "test_q3_q5_a2_text": {
+    "en": "waves",
+    "ru": "волн",
+    "es": "de ondas"
+  },
+  "test_q3_q5_a3_text": {
+    "en": "anchors",
+    "ru": "якорей",
+    "es": "de anclas"
+  },
+  "test_q3_q6_text": {
+    "en": "Euclidean distance as a characteristic shape has ",
+    "ru": "Евклидово расстояние в качестве характеристической формы имеет ",
+    "es": "La distancia euclidiana como forma característica tiene "
+  },
+  "test_q3_q6_a1_text": {
+    "en": "rhombus",
+    "ru": "робм",
+    "es": "rombo"
+  },
+  "test_q3_q6_a2_text": {
+    "en": "circle",
+    "ru": "круг",
+    "es": "círculo"
+  },
+  "test_q3_q6_a3_text": {
+    "en": "square",
+    "ru": "квадрат",
+    "es": "cuadrado"
+  },
+  "test_q3_q7_text": {
+    "en": "By what name is chessboard distance known? ",
+    "ru": "Под каким названием известно шахматное расстояние? ",
+    "es": "¿Con qué nombre se conoce la distancia de ajedrez? "
+  },
+  "test_q3_q7_a1_text": {
+    "en": "Chebyshev distance ",
+    "ru": "расстояние Чебышёва ",
+    "es": "distancia de Chebyshev "
+  },
+  "test_q3_q7_a2_text": {
+    "en": "Sobel distance ",
+    "ru": "расстояние Собеля ",
+    "es": "distancia de Sobel "
+  },
+  "test_q3_q7_a3_text": {
+    "en": "city distance ",
+    "ru": "городское расстояние ",
+    "es": "distancia de ciudad "
+  },
+  "test_q3_q8_text": {
+    "en": "When converting a binary image to halftone, the method used is",
+    "ru": "При переводе бинарного изображения в полутоновое используют метод",
+    "es": "Al convertir una imagen binaria a medio tono, utilizan el método"
+  },
+  "test_q3_q8_a1_text": {
+    "en": "«number of pixels» ",
+    "ru": "«количество пикселей» ",
+    "es": "«cantidad de píxeles» "
+  },
+  "test_q3_q8_a2_text": {
+    "en": "«number of brightness levels» ",
+    "ru": "«количество яркостей» ",
+    "es": "«cantidad de brillos» "
+  },
+  "test_q3_q8_a3_text": {
+    "en": "Barnsen's method ",
+    "ru": "метод Барнсена ",
+    "es": "método de Barnsen "
+  },
+  "test_q3_q9_text": {
+    "en": "Euclidean distance formula: ",
+    "ru": "Формула евклидова расстояния: ",
+    "es": "Fórmula de la distancia euclidiana: "
+  },
+  "test_q3_q10_text": {
+    "en": "City distance formula: ",
+    "ru": "Формула городского расстояния: ",
+    "es": "Fórmula de la distancia de ciudad: "
+  },
+  "test_q4_q1_text": {
+    "en": "What is the conversion of a halftone image to binary called? ",
+    "ru": "Как называется перевод полутонового изображения в бинарное? ",
+    "es": "¿Cómo se llama la conversión de una imagen de medio tono a binaria? "
+  },
+  "test_q4_q1_a1_text": {
+    "en": "smudging",
+    "ru": "растушёвка",
+    "es": "difuminado"
+  },
+  "test_q4_q1_a2_text": {
+    "en": "equalization",
+    "ru": "эквиализация",
+    "es": "ecualización"
+  },
+  "test_q4_q1_a3_text": {
+    "en": "binarization",
+    "ru": "бинаризация",
+    "es": "binarización"
+  },
+  "test_q4_q2_text": {
+    "en": "What two groups of binarization are distinguished? ",
+    "ru": "Какие две группы бинаризации выделяют? ",
+    "es": "¿Qué dos grupos de binarización se distinguen? "
+  },
+  "test_q4_q2_a1_text": {
+    "en": "global and local",
+    "ru": "глобальные и локальные",
+    "es": "globales y locales"
+  },
+  "test_q4_q2_a2_text": {
+    "en": "simple and complex ",
+    "ru": "простые и сложные ",
+    "es": "simples y complejos "
+  },
+  "test_q4_q2_a3_text": {
+    "en": "simple and global ",
+    "ru": "простые и глобальные ",
+    "es": "simples y globales "
+  },
+  "test_q4_q3_text": {
+    "en": "What is characteristic of global binarization methods? ",
+    "ru": "Что характерно для глобальных методов бинаризации? ",
+    "es": "¿Qué es característico de los métodos globales de binarización? "
+  },
+  "test_q4_q3_a1_text": {
+    "en": "dividing the image into several regions ",
+    "ru": "разбивку изображение на несколько областей ",
+    "es": "división de la imagen en varias áreas "
+  },
+  "test_q4_q3_a2_text": {
+    "en": "working with the entire image at once ",
+    "ru": "работа со всем изображением сразу ",
+    "es": "trabajo con toda la imagen a la vez "
+  },
+  "test_q4_q3_a3_text": {
+    "en": "both options are correct ",
+    "ru": "оба варианта верные ",
+    "es": "ambas opciones son correctas "
+  },
+  "test_q4_q4_text": {
+    "en": "What is characteristic of local binarization methods? ",
+    "ru": "Что характерно для локальных методов бинаризации? ",
+    "es": "¿Qué es característico de los métodos locales de binarización? "
+  },
+  "test_q4_q4_a1_text": {
+    "en": "dividing the image into several regions ",
+    "ru": "разбивку изображение на несколько областей ",
+    "es": "división de la imagen en varias áreas "
+  },
+  "test_q4_q4_a2_text": {
+    "en": "working with the entire image at once ",
+    "ru": "работа со всем изображением сразу ",
+    "es": "trabajo con toda la imagen a la vez "
+  },
+  "test_q4_q4_a3_text": {
+    "en": "both options are correct ",
+    "ru": "оба варианта верные ",
+    "es": "ambas opciones son correctas "
+  },
+  "test_q4_q5_text": {
+    "en": "What default threshold is used in the threshold binarization method",
+    "ru": "Какой порог по умолчанию используется в пороговом методе бинаризации",
+    "es": "¿Qué umbral por defecto se utiliza en el método de umbral de binarización?"
+  },
+  "test_q4_q5_a1_text": {
+    "en": "124",
+    "ru": "124",
+    "es": "124"
+  },
+  "test_q4_q5_a2_text": {
+    "en": "128",
+    "ru": "128",
+    "es": "128"
+  },
+  "test_q4_q5_a3_text": {
+    "en": "130",
+    "ru": "130",
+    "es": "130"
+  },
+  "test_q4_q6_text": {
+    "en": "What does the application of the «mode» method start with in image binarization? ",
+    "ru": "С чего начинается применение метода «мод» при бинаризации изображения? ",
+    "es": "¿Con qué comienza la aplicación del método de «moda» al binarizar una imagen? "
+  },
+  "test_q4_q6_a1_text": {
+    "en": "building a brightness histogram ",
+    "ru": "построение гистограммы яркости ",
+    "es": "construcción de un histograma de brillo "
+  },
+  "test_q4_q6_a2_text": {
+    "en": "image smudging ",
+    "ru": "растушёвка изображения ",
+    "es": "difuminado de la imagen "
+  },
+  "test_q4_q6_a3_text": {
+    "en": "expanding image with zeros",
+    "ru": "расширение изображения нулями",
+    "es": "expansión de la imagen con ceros"
+  },
+  "test_q4_q7_text": {
+    "en": "Barnsen's method belongs to ",
+    "ru": "Метод Барнсена относится к ",
+    "es": "El método de Barnsen pertenece a "
+  },
+  "test_q4_q7_a1_text": {
+    "en": "global binarization ",
+    "ru": "глобальной бинаризации ",
+    "es": "binarización global "
+  },
+  "test_q4_q7_a2_text": {
+    "en": "local binarization ",
+    "ru": "локальной бинаризации ",
+    "es": "binarización local "
+  },
+  "test_q4_q7_a3_text": {
+    "en": "filtering",
+    "ru": "фильтрации",
+    "es": "filtrado"
+  },
+  "test_q4_q8_text": {
+    "en": "«120» method belongs to ",
+    "ru": "Метод «120» относится к ",
+    "es": "El método «120» pertenece a "
+  },
+  "test_q4_q8_a1_text": {
+    "en": "global binarization ",
+    "ru": "глобальной бинаризации ",
+    "es": "binarización global "
+  },
+  "test_q4_q8_a2_text": {
+    "en": "local binarization ",
+    "ru": "локальной бинаризации ",
+    "es": "binarización local "
+  },
+  "test_q4_q8_a3_text": {
+    "en": "filtering",
+    "ru": "фильтрации",
+    "es": "filtrado"
+  },
+  "test_q4_q9_text": {
+    "en": "Nimblack's method belongs to ",
+    "ru": "Метод Нимблека относится к ",
+    "es": "El método de Nimblack pertenece a "
+  },
+  "test_q4_q9_a1_text": {
+    "en": "global binarization ",
+    "ru": "глобальной бинаризации ",
+    "es": "binarización global "
+  },
+  "test_q4_q9_a2_text": {
+    "en": "local binarization",
+    "ru": "локальной бинаризации",
+    "es": "binarización local"
+  },
+  "test_q4_q9_a3_text": {
+    "en": "filtering",
+    "ru": "фильтрации",
+    "es": "filtrado"
+  },
+  "test_q4_q10_text": {
+    "en": "Average brightness method belongs to ",
+    "ru": "Метод средней яркости относится к ",
+    "es": "El método del brillo medio pertenece a "
+  },
+  "test_q4_q10_a1_text": {
+    "en": "global binarization ",
+    "ru": "глобальной бинаризации ",
+    "es": "binarización global "
+  },
+  "test_q4_q10_a2_text": {
+    "en": "local binarization ",
+    "ru": "локальной бинаризации ",
+    "es": "binarización local "
+  },
+  "test_q4_q10_a3_text": {
+    "en": "filtering",
+    "ru": "фильтрации",
+    "es": "filtrado"
+  },
+  "test_q5_q1_text": {
+    "en": "What is the difference between maximum and minimum brightness values called? ",
+    "ru": "Как называется разность максимального и минимального значений яркости? ",
+    "es": "¿Cómo se llama la diferencia entre los valores máximo y mínimo de brillo? "
+  },
+  "test_q5_q1_a1_text": {
+    "en": "sharpness",
+    "ru": "резкость",
+    "es": "nitidez"
+  },
+  "test_q5_q1_a2_text": {
+    "en": "brightness",
+    "ru": "яркость",
+    "es": "brillo"
+  },
+  "test_q5_q1_a3_text": {
+    "en": "contrast",
+    "ru": "контраст",
+    "es": "contraste"
+  },
+  "test_q5_q2_text": {
+    "en": "What is the ratio of brightness differences of adjacent fragments called? ",
+    "ru": "Как называется отношение разности яркостей соседних фрагментов? ",
+    "es": "¿Cómo se llama la relación de las diferencias de brillo de fragmentos adyacentes? "
+  },
+  "test_q5_q2_a1_text": {
+    "en": "sharpness",
+    "ru": "резкость",
+    "es": "nitidez"
+  },
+  "test_q5_q2_a2_text": {
+    "en": "brightness",
+    "ru": "яркость",
+    "es": "brillo"
+  },
+  "test_q5_q2_a3_text": {
+    "en": "contrast",
+    "ru": "контраст",
+    "es": "contraste"
+  },
+  "test_q5_q3_text": {
+    "en": "What types of histogram normalization exist? ",
+    "ru": "Какие существуют виды нормализации гистограмм? ",
+    "es": "¿Qué tipos de normalización de histogramas existen? "
+  },
+  "test_q5_q3_a1_text": {
+    "en": "by number of pixels, by contrast ",
+    "ru": "по количеству пикселей, по контрасту ",
+    "es": "por cantidad de píxeles, por contraste "
+  },
+  "test_q5_q3_a2_text": {
+    "en": "by number of pixels, by number of gradations",
+    "ru": "по количеству пикселей, по количеству градаций",
+    "es": "por cantidad de píxeles, por cantidad de gradaciones"
+  },
+  "test_q5_q3_a3_text": {
+    "en": "by brightness, by contrast ",
+    "ru": "по яркости, по контрасту ",
+    "es": "por brillo, por contraste "
+  },
+  "test_q5_q4_text": {
+    "en": "What does histogram equalization imply? ",
+    "ru": "Что подразумевает эквалайзация гистограммы? ",
+    "es": "¿Qué implica la ecualización de un histograma? "
+  },
+  "test_q5_q4_a1_text": {
+    "en": "histogram expansion ",
+    "ru": "расширение гистограммы ",
+    "es": "expansión del histograma "
+  },
+  "test_q5_q4_a2_text": {
+    "en": "histogram reduction",
+    "ru": "уменьшение гистограммы",
+    "es": "reducción del histograma"
+  },
+  "test_q5_q4_a3_text": {
+    "en": "histogram leveling ",
+    "ru": "выравнивание гистограммы ",
+    "es": "nivelación del histograma "
+  },
+  "test_q5_q5_text": {
+    "en": "What refers to non-linear histogram transformation? ",
+    "ru": "Что относится к нелинейному преобразованию гистограмм? ",
+    "es": "¿Qué pertenece a la transformación no lineal de histogramas? "
+  },
+  "test_q5_q5_a1_text": {
+    "en": "gamma correction",
+    "ru": "гамма-коррекция",
+    "es": "corrección gamma"
+  },
+  "test_q5_q5_a2_text": {
+    "en": "erosion",
+    "ru": "эрозия",
+    "es": "erosión"
+  },
+  "test_q5_q5_a3_text": {
+    "en": "dilation",
+    "ru": "дилатация",
+    "es": "dilatación"
+  },
+  "test_q5_q6_text": {
+    "en": "Is it true that the point of image solarization is that areas of the original image with white or near-white brightness levels have black level after processing? ",
+    "ru": "Верно ли, что смысл соляризации изображения заключается в том, что участки исходного изображения, имеющие уровень белого или близкий к нему уровень яркости, после обработки имеют уровень черного? ",
+    "es": "¿Es cierto que el sentido de la solarización de una imagen consiste en que las áreas de la imagen original que tienen un nivel de brillo blanco o cercano a él, después del procesamiento tienen un nivel de negro? "
+  },
+  "test_q5_q6_a1_text": {
+    "en": "yes",
+    "ru": "да",
+    "es": "sí"
+  },
+  "test_q5_q6_a2_text": {
+    "en": "no",
+    "ru": "нет",
+    "es": "no"
+  },
+  "test_q5_q6_a3_text": {
+    "en": "don't know",
+    "ru": "не знаю",
+    "es": "no lo sé"
+  },
+  "test_q5_q7_text": {
+    "en": "What is saturation? ",
+    "ru": "Что такое насыщенность? ",
+    "es": "¿Qué es la saturación? "
+  },
+  "test_q5_q7_a1_text": {
+    "en": "wavelength of radiation with maximum intensity present ",
+    "ru": "длина волны излучения с максимально присутствующей интенсивностью ",
+    "es": "longitud de onda de la radiación con la máxima intensidad presente "
+  },
+  "test_q5_q7_a2_text": {
+    "en": "color purity, value that characterizes the presence of white color ",
+    "ru": "чистота цвета, величина, которая характеризует присутствие белого цвета ",
+    "es": "pureza del color, valor que caracteriza la presencia de color blanco "
+  },
+  "test_q5_q7_a3_text": {
+    "en": "energy content of light ",
+    "ru": "энергетическое содержание света ",
+    "es": "contenido energético de la luz "
+  },
+  "test_q5_q8_text": {
+    "en": "What color characteristics are distinguished? ",
+    "ru": "Какие характеристики цвета выделяют? ",
+    "es": "¿Qué характеристики del color se distinguen? "
+  },
+  "test_q5_q8_a1_text": {
+    "en": "hue, brightness, saturation ",
+    "ru": "цветность, яркость, насыщенность ",
+    "es": "tono, brillo, saturación "
+  },
+  "test_q5_q8_a2_text": {
+    "en": "hue, brightness, lightness  ",
+    "ru": "цветность, яркость, светлота  ",
+    "es": "tono, brillo, luminosidad  "
+  },
+  "test_q5_q8_a3_text": {
+    "en": "hue, saturation, size",
+    "ru": "цветность, насыщенность, размер",
+    "es": "tono, saturación, tamaño"
+  },
+  "test_q5_q9_text": {
+    "en": "What is a color model? ",
+    "ru": "Что такое цветовая модель? ",
+    "es": "¿Qué es un modelo de color? "
+  },
+  "test_q5_q9_a1_text": {
+    "en": "number of colors in an image ",
+    "ru": "количество цветов на изображении ",
+    "es": "cantidad de colores en la imagen "
+  },
+  "test_q5_q9_a2_text": {
+    "en": "color purity, value that characterizes the presence of white color ",
+    "ru": "чистота цвета, величина, которая характеризует присутствие белого цвета ",
+    "es": "pureza del color, valor que caracteriza la presencia de color blanco "
+  },
+  "test_q5_q9_a3_text": {
+    "en": "a method that allows explaining color properties and behavior in some context ",
+    "ru": "метод, позволяющий объяснять свойства и поведение цвета в некотором контексте ",
+    "es": "un método que permite explicar las propiedades y el comportamiento del color en algún contexto "
+  },
+  "test_q5_q10_text": {
+    "en": "Is it true that YUV is a color coding system, usually used as part of a color image pipeline?",
+    "ru": "Верно ли, что YUV - система цветного кодирования, обычно используемая как часть контура цветного изображения?",
+    "es": "¿Es cierto que YUV es un sistema de codificación de colores, utilizado habitualmente como parte de un pipeline de imagen en color?"
+  },
+  "test_q5_q10_a1_text": {
+    "en": "yes",
+    "ru": "да",
+    "es": "sí"
+  },
+  "test_q5_q10_a2_text": {
+    "en": "no",
+    "ru": "нет",
+    "es": "no"
+  },
+  "test_q5_q10_a3_text": {
+    "en": "don't know ",
+    "ru": "не знаю ",
+    "es": "no lo sé "
+  },
+  "test_q6_q1_text": {
+    "en": "What is image filtering used for? ",
+    "ru": "Для чего используется фильтрация изображения? ",
+    "es": "¿Para qué se utiliza el filtrado de imágenes? "
+  },
+  "test_q6_q1_a1_text": {
+    "en": "to reduce image size ",
+    "ru": "для уменьшения размера изображения ",
+    "es": "para reducir el tamaño de la imagen "
+  },
+  "test_q6_q1_a2_text": {
+    "en": "to convert binary image to halftone ",
+    "ru": "для перевода бинарного изображения в полутоновое ",
+    "es": "para convertir una imagen binaria a medio tono "
+  },
+  "test_q6_q1_a3_text": {
+    "en": "to suppress noise in an image ",
+    "ru": "для подавления шумов на изображении ",
+    "es": "para suprimir el ruido en la imagen "
+  },
+  "test_q6_q2_text": {
+    "en": "What is the weight coefficient matrix defined for pixels in the neighborhood of the analyzed pixel called? ",
+    "ru": "Как называется матрица весовых коэффициентов, определенных для пикселей, попавших в окрестности анализируемого пикселя? ",
+    "es": "¿Cómo se llama la matriz de coeficientes de ponderación definidos para los píxeles que caen en la vecindad del píxel analizado? "
+  },
+  "test_q6_q2_a1_text": {
+    "en": "mask",
+    "ru": "маска",
+    "es": "máscara"
+  },
+  "test_q6_q2_a2_text": {
+    "en": "erosion",
+    "ru": "эрозия",
+    "es": "erosión"
+  },
+  "test_q6_q2_a3_text": {
+    "en": "dilation",
+    "ru": "дилатация",
+    "es": "dilatación"
+  },
+  "test_q6_q3_text": {
+    "en": "What is the approach in image processing where the source image is a set and set-theoretic operations are applied to it? ",
+    "ru": "Как называется подход в обработке изображений, суть которого в том, что исходное изображение - множество, и к нему применяются теоретико-множественные операции? ",
+    "es": "¿Cómo se llama el enfoque en el procesamiento de imágenes cuya esencia es que la imagen original es un conjunto y se le aplican operaciones de la teoría de conjuntos? "
+  },
+  "test_q6_q3_a1_text": {
+    "en": "mathematical morphology ",
+    "ru": "математическая морфология ",
+    "es": "morfología matemática "
+  },
+  "test_q6_q3_a2_text": {
+    "en": "dilation",
+    "ru": "дилатация",
+    "es": "dilatación"
+  },
+  "test_q6_q3_a3_text": {
+    "en": "structuring elements ",
+    "ru": "структурирование элементов ",
+    "es": "estructuración de elementos "
+  },
+  "test_q6_q4_text": {
+    "en": "What is the morphological operation used to reduce the size of a foreground object called? ",
+    "ru": "Как называется морфологическая операция, используемая для уменьшения размера объекта переднего плана? ",
+    "es": "¿Cómo se llama la operación morfológica utilizada para reducir el tamaño de un objeto en primer plano? "
+  },
+  "test_q6_q4_a1_text": {
+    "en": "mask",
+    "ru": "маска",
+    "es": "máscara"
+  },
+  "test_q6_q4_a2_text": {
+    "en": "erosion",
+    "ru": "эрозия",
+    "es": "erosión"
+  },
+  "test_q6_q4_a3_text": {
+    "en": "expansion",
+    "ru": "расширение",
+    "es": "expansión"
+  },
+  "test_q6_q5_text": {
+    "en": "What is the morphological operation used to increase the size of a foreground object called? ",
+    "ru": "Как называется морфологическая операция, используемая для увеличения размера объекта переднего плана? ",
+    "es": "¿Cómo se llama la operación morfológica utilizada para aumentar el tamaño de un objeto en primer plano? "
+  },
+  "test_q6_q5_a1_text": {
+    "en": "mask",
+    "ru": "маска",
+    "es": "máscara"
+  },
+  "test_q6_q5_a2_text": {
+    "en": "erosion",
+    "ru": "эрозия",
+    "es": "erosión"
+  },
+  "test_q6_q5_a3_text": {
+    "en": "expansion",
+    "ru": "расширение",
+    "es": "expansión"
+  },
+  "test_q6_q6_text": {
+    "en": "What is the coefficient matrix called that is «multiplied» by image pixel values to get the required result? ",
+    "ru": "Как называется матрица коэффициентов, которая «умножается» на значение пикселей изображения для получения требуемого результата? ",
+    "es": "¿Cómo se llama la matriz de coeficientes que se «multiplica» por el valor de los píxeles de la imagen para obtener el resultado deseado? "
+  },
+  "test_q6_q6_a1_text": {
+    "en": "adjacency matrix ",
+    "ru": "матрица смежности ",
+    "es": "matriz de adyacencia"
+  },
+  "test_q6_q6_a2_text": {
+    "en": "convolution matrix ",
+    "ru": "матрица свёртки ",
+    "es": "matriz de convolución"
+  },
+  "test_q6_q6_a3_text": {
+    "en": "erosion matrix ",
+    "ru": "матрица эрозии ",
+    "es": "matriz de erosión"
+  },
+  "test_q6_q7_text": {
+    "en": "The operation of which filter consists in replacing brightness in a given pixel with average brightness calculated in its 8-neighborhood, including the pixel itself? ",
+    "ru": "Работа какого фильтра заключается в замене яркости в данном пикселе на среднюю яркость, вычисленную в его 8-окрестности, включая и сам пиксель? ",
+    "es": "¿El trabajo de qué filtro consiste en reemplazar el brillo en un píxel dado por el brillo promedio calculado en su vecindad de 8, incluido el propio píxel? "
+  },
+  "test_q6_q7_a1_text": {
+    "en": "sharpness enhancement filter ",
+    "ru": "фильтра улучшения чёткости ",
+    "es": "filtro de mejora de nitidez "
+  },
+  "test_q6_q7_a2_text": {
+    "en": "blur filter ",
+    "ru": "фильтра размытия ",
+    "es": "filtro de desenfoque "
+  },
+  "test_q6_q7_a3_text": {
+    "en": "averaging filter ",
+    "ru": "усредняющего фильтра ",
+    "es": "filtro de promedio "
+  },
+  "test_q6_q8_text": {
+    "en": "Which filter is a modification of the averaging one? ",
+    "ru": "Какой фильтр является модификацией усредняющего? ",
+    "es": "¿Qué filtro es una modificación del de promedio? "
+  },
+  "test_q6_q8_a1_text": {
+    "en": "threshold filter ",
+    "ru": "пороговый фильтр ",
+    "es": "filtro de umbral "
+  },
+  "test_q6_q8_a2_text": {
+    "en": "blur filter ",
+    "ru": "фильтр размытия ",
+    "es": "filtro de desenfoque "
+  },
+  "test_q6_q8_a3_text": {
+    "en": "sharpness enhancement filter ",
+    "ru": "фильтр улучшения чёткости ",
+    "es": "filtro de mejora de nitidez "
+  },
+  "test_q6_q9_text": {
+    "en": "Which values in the mask determine which of the neighboring pixels should be considered when performing the operation? ",
+    "ru": "Какие значения в маске определяют, какие из соседних пикселей следует учитывать при осуществлении операции? ",
+    "es": "¿Qué valores en la máscara determinan cuáles de los píxeles vecinos deben tenerse en cuenta al realizar la operación? "
+  },
+  "test_q6_q9_a1_text": {
+    "en": "zero",
+    "ru": "нулевые",
+    "es": "nulos"
+  },
+  "test_q6_q9_a2_text": {
+    "en": "non-zero",
+    "ru": "ненулевые",
+    "es": "no nulos"
+  },
+  "test_q6_q9_a3_text": {
+    "en": "all values ",
+    "ru": "все значения ",
+    "es": "todos los valores "
+  },
+  "test_q6_q10_text": {
+    "en": "What is the operation of sequential application of erosion and expansion called? ",
+    "ru": "Как называется операция последовательного применения эрозии и расширения? ",
+    "es": "¿Cómo se llama la operación de aplicación sucesiva de erosión y expansión? "
+  },
+  "test_q6_q10_a1_text": {
+    "en": "closing",
+    "ru": "закрытие",
+    "es": "cierre"
+  },
+  "test_q6_q10_a2_text": {
+    "en": "erosenion",
+    "ru": "эроэрение",
+    "es": "erosión"
+  },
+  "test_q6_q10_a3_text": {
+    "en": "opening",
+    "ru": "открытие",
+    "es": "apertura"
+  },
+  "test_q7_q1_text": {
+    "en": "What is the process of dividing a digital image into multiple segments called? ",
+    "ru": "Как называется процесс разделения цифрового изображения на несколько сегментов? ",
+    "es": "¿Cómo se llama el proceso de dividir una imagen digital en varios segmentos? "
+  },
+  "test_q7_q1_a1_text": {
+    "en": "filtering",
+    "ru": "фильтрация",
+    "es": "filtrado"
+  },
+  "test_q7_q1_a2_text": {
+    "en": "segmentation",
+    "ru": "сегментация",
+    "es": "segmentación"
+  },
+  "test_q7_q1_a3_text": {
+    "en": "binarization",
+    "ru": "бинаризация",
+    "es": "binarización"
+  },
+  "test_q7_q2_text": {
+    "en": "What is a closed line, the outline of some geometric figure or object, called? ",
+    "ru": "Как называется замкнутая линия, очертание некоторой геометрической фигуры, предмета? ",
+    "es": "¿Cómo se llama una línea cerrada, el contorno de alguna figura geométrica u objeto? "
+  },
+  "test_q7_q2_a1_text": {
+    "en": "contour",
+    "ru": "контур",
+    "es": "contorno"
+  },
+  "test_q7_q2_a2_text": {
+    "en": "filter",
+    "ru": "фильтр",
+    "es": "filtro"
+  },
+  "test_q7_q2_a3_text": {
+    "en": "mask",
+    "ru": "маска",
+    "es": "máscara"
+  },
+  "test_q7_q3_text": {
+    "en": "What mask size is used in Roberts method? ",
+    "ru": "Какой размер маски используется в методе Робертса? ",
+    "es": "¿Qué tamaño de máscara se utiliza en el método de Roberts? "
+  },
+  "test_q7_q3_a1_text": {
+    "en": "3 × 3",
+    "ru": "3 × 3",
+    "es": "3 × 3"
+  },
+  "test_q7_q3_a2_text": {
+    "en": "2 × 3 ",
+    "ru": "2 × 3 ",
+    "es": "2 × 3 "
+  },
+  "test_q7_q3_a3_text": {
+    "en": "2 × 2 ",
+    "ru": "2 × 2 ",
+    "es": "2 × 2 "
+  },
+  "test_q7_q4_text": {
+    "en": "In which method does the algorithm replace white elements with black between two black ones if the distance between them is less than some threshold? ",
+    "ru": "В каком методе алгоритм заменяет белые элементы на чёрные между двумя черными, если расстояние между ними меньше, чем некоторый порог? ",
+    "es": "¿En qué método el algoritmo reemplaza los elementos blancos por negros entre dos negros si la distancia entre ellos es menor que cierto umbral? "
+  },
+  "test_q7_q4_a1_text": {
+    "en": "profile extraction method ",
+    "ru": "метод выделения профилей ",
+    "es": "método de extracción de perfiles "
+  },
+  "test_q7_q4_a2_text": {
+    "en": "expansion method ",
+    "ru": "метод расширения ",
+    "es": "método de expansión "
+  },
+  "test_q7_q4_a3_text": {
+    "en": "Roberts method ",
+    "ru": "метод Робертса ",
+    "es": "método de Roberts "
+  },
+  "test_q7_q5_text": {
+    "en": "Which method's algorithm is based on using two thresholds when analyzing the gradient matrix? ",
+    "ru": "Алгоритм какого метода основан на использовании двух порогов при анализе матрицы градиентов? ",
+    "es": "¿El algoritmo de qué método se basa en el uso de dos umbrales al analizar la matriz de gradientes? "
+  },
+  "test_q7_q5_a1_text": {
+    "en": "Sobel method ",
+    "ru": "метод Собела ",
+    "es": "método de Sobel "
+  },
+  "test_q7_q5_a2_text": {
+    "en": "Prewitt method ",
+    "ru": "метод Превитта ",
+    "es": "método de Prewitt "
+  },
+  "test_q7_q5_a3_text": {
+    "en": "Canny method ",
+    "ru": "метод Кэнни ",
+    "es": "método de Canny "
+  },
+  "test_q7_q6_text": {
+    "en": "Which transformation belongs to the profile extraction method? ",
+    "ru": "Какое преобразование относится к методу выделения профилей? ",
+    "es": "¿Qué transformación pertenece al método de extracción de perfiles? "
+  },
+  "test_q7_q6_a1_text": {
+    "en": "Canny transformation ",
+    "ru": "преобразование Кэнни ",
+    "es": "transformación de Canny "
+  },
+  "test_q7_q6_a2_text": {
+    "en": "Hough transformation",
+    "ru": "преобразование Хафа",
+    "es": "transformación de Hough"
+  },
+  "test_q7_q6_a3_text": {
+    "en": "Sobel transformation ",
+    "ru": "преобразование Собела ",
+    "es": "transformación de Sobel "
+  },
+  "test_q7_q7_text": {
+    "en": "What is image segmentation used for? ",
+    "ru": "Для чего используется сегментация изображения? ",
+    "es": "¿Para qué se utiliza la segmentación de imágenes? "
+  },
+  "test_q7_q7_a1_text": {
+    "en": "to highlight objects and borders in an image ",
+    "ru": "для выделения объектов и границ на изображении ",
+    "es": "para resaltar objetos y bordes en la imagen "
+  },
+  "test_q7_q7_a2_text": {
+    "en": "to improve image sharpness ",
+    "ru": "для улучшения чёткости изображения ",
+    "es": "para mejorar la nitidez de la imagen "
+  },
+  "test_q7_q7_a3_text": {
+    "en": "for image compression ",
+    "ru": "для сжатия изображения ",
+    "es": "para la compresión de imágenes "
+  },
+  "test_q7_q8_text": {
+    "en": "Is it true that all pixels in a segment are similar in some characteristic or calculated property, e.g., color, brightness or texture? ",
+    "ru": "Верно ли утверждение, что все пиксели в сегменте похожи по некоторой характеристике или вычисленному свойству, например по цвету, яркости или текстуре? ",
+    "es": "¿Es cierta la afirmación de que todos los píxeles de un segmento son similares en alguna característica o propiedad calculada, por ejemplo, en color, brillo o textura? "
+  },
+  "test_q7_q8_a1_text": {
+    "en": "yes",
+    "ru": "да",
+    "es": "sí"
+  },
+  "test_q7_q8_a2_text": {
+    "en": "no",
+    "ru": "нет",
+    "es": "no"
+  },
+  "test_q7_q8_a3_text": {
+    "en": "don't know ",
+    "ru": "не знаю ",
+    "es": "no lo sé "
+  },
+  "test_q7_q9_text": {
+    "en": "To which method does this formula belong? ",
+    "ru": "К какому методу относится данная формула? ",
+    "es": "¿A qué método pertenece esta fórmula? "
+  },
+  "test_q7_q9_a1_text": {
+    "en": "Roberts method ",
+    "ru": "метод Робертса ",
+    "es": "método de Roberts "
+  },
+  "test_q7_q9_a2_text": {
+    "en": "profile extraction: Hough transformation ",
+    "ru": "метод выделения профилей: преобразование Хафа ",
+    "es": "método de extracción de perfiles: transformación de Hough "
+  },
+  "test_q7_q9_a3_text": {
+    "en": "Sobel method ",
+    "ru": "метод Собела ",
+    "es": "método de Собела "
+  },
+  "test_q7_q10_text": {
+    "en": "Apply Prewitt operator for pixel X ",
+    "ru": "Примените оператор Превитта для пикселя Х ",
+    "es": "Aplique el operador de Prewitt para el píxel X "
+  },
+  "test_q7_q10_a1_text": {
+    "en": "2√2 ",
+    "ru": "2√2 ",
+    "es": "2√2 "
+  },
+  "test_q7_q10_a2_text": {
+    "en": "2",
+    "ru": "2",
+    "es": "2"
+  },
+  "test_q7_q10_a3_text": {
+    "en": "2√3",
+    "ru": "2√3",
+    "es": "2√3"
+  },
+  "test_q8_q1_text": {
+    "en": "What is the spatial organization of basic primitives that themselves have a random aspect called? ",
+    "ru": "Как называется пространственная организация базовых примитивов, которые сами имеют случайный аспект? ",
+    "es": "¿Cómo se llama la organización espacial de primitivas básicas que tienen ellas mismas un aspecto aleatorio? "
+  },
+  "test_q8_q1_a1_text": {
+    "en": "filtering",
+    "ru": "фильтрация",
+    "es": "filtrado"
+  },
+  "test_q8_q1_a2_text": {
+    "en": "dilation",
+    "ru": "дилатация",
+    "es": "dilatación"
+  },
+  "test_q8_q1_a3_text": {
+    "en": "texture",
+    "ru": "текстура",
+    "es": "textura"
+  },
+  "test_q8_q2_text": {
+    "en": "Adjacency matrix size is defined by ",
+    "ru": "Размер матрицы смежности определяется ",
+    "es": "El tamaño de la matriz de adyacencia se determina por "
+  },
+  "test_q8_q2_a1_text": {
+    "en": "number of brightness gradations in the image ",
+    "ru": "количеством градаций яркости изображения ",
+    "es": "la cantidad de gradaciones de brillo de la imagen "
+  },
+  "test_q8_q2_a2_text": {
+    "en": "total number of pixels  ",
+    "ru": "общим количеством пикселей  ",
+    "es": "la cantidad total de píxeles  "
+  },
+  "test_q8_q2_a3_text": {
+    "en": "chosen by the user ",
+    "ru": "выбирается пользователем ",
+    "es": "es elegido por el usuario "
+  },
+  "test_q8_q3_text": {
+    "en": "What is the maximum connected set of pixels of same brightness stretched into a straight line called? ",
+    "ru": "Как называется максимальная связная совокупность вытянутых в прямую линию пикселей одинаковой яркости? ",
+    "es": "¿Cómo se llama el conjunto conectado máximo de píxeles del mismo brillo extendidos en línea recta? "
+  },
+  "test_q8_q3_a1_text": {
+    "en": "texture",
+    "ru": "текстура",
+    "es": "textura"
+  },
+  "test_q8_q3_a2_text": {
+    "en": "series (run)",
+    "ru": "серия",
+    "es": "serie (corrida)"
+  },
+  "test_q8_q3_a3_text": {
+    "en": "contour",
+    "ru": "контур",
+    "es": "contorno"
+  },
+  "test_q8_q4_text": {
+    "en": "Which method refers to run-length texture descriptors? ",
+    "ru": "Какой метод относится к описывающим текстуры длинами серий? ",
+    "es": "¿Qué método se refiere a los que describen texturas por longitudes de series? "
+  },
+  "test_q8_q4_a1_text": {
+    "en": "«120» method ",
+    "ru": "метод «120» ",
+    "es": "método «120» "
+  },
+  "test_q8_q4_a2_text": {
+    "en": "run-length method ",
+    "ru": "метод бегущих длин ",
+    "es": "método de longitudes de corridas "
+  },
+  "test_q8_q4_a3_text": {
+    "en": "local binary partitioning ",
+    "ru": "локальное двоичное разбиение ",
+    "es": "partición binaria local "
+  },
+  "test_q8_q5_text": {
+    "en": "Into which two groups are contour extraction algorithms divided? ",
+    "ru": "На какие две группы делятся алгоритмы выделения контуров? ",
+    "es": "¿En qué dos grupos se dividen los algoritmos de extracción de contornos? "
+  },
+  "test_q8_q5_a1_text": {
+    "en": "simple and complex",
+    "ru": "простые и сложные",
+    "es": "simples y complejos"
+  },
+  "test_q8_q5_a2_text": {
+    "en": "scanning and matrix ",
+    "ru": "сканирующие и матричные ",
+    "es": "de escaneo y matriciales "
+  },
+  "test_q8_q5_a3_text": {
+    "en": "scanning and tracking ",
+    "ru": "сканирующий и отслеживающие ",
+    "es": "de escaneo y de seguimiento "
+  },
+  "test_q8_q6_text": {
+    "en": "Which algorithm belongs to tracking contour extraction algorithms? ",
+    "ru": "Какой алгоритм относится к отслеживающим алгоритмам выделения контуров? ",
+    "es": "¿Qué algoritmo pertenece a los algoritmos de seguimiento para la extracción de contornos? "
+  },
+  "test_q8_q6_a1_text": {
+    "en": "«Bug» algorithm ",
+    "ru": "алгоритм «Жук» ",
+    "es": "algoritmo del «Escarabajo» "
+  },
+  "test_q8_q6_a2_text": {
+    "en": "«Butterfly» algorithm ",
+    "ru": "алгоритм «Бабочка» ",
+    "es": "algoritmo de la «Mariposa» "
+  },
+  "test_q8_q6_a3_text": {
+    "en": "scanning algorithm ",
+    "ru": "сканирующий алгоритм ",
+    "es": "algoritmo de escaneo"
+  },
+  "test_q8_q7_text": {
+    "en": "Which contour extraction algorithms are based on viewing the entire image and extracting contour points without tracking the object contour?",
+    "ru": "Какие алгоритмы выделения контуров основаны на просмотре всего изображения и выделения контурных точек без отслеживания контура объекта?",
+    "es": "¿Qué algoritmos de extracción de contornos se basan en la visualización de toda la imagen y la extracción de puntos de contorno sin el seguimiento del contorno del objeto?"
+  },
+  "test_q8_q7_a1_text": {
+    "en": "scanning",
+    "ru": "сканирующие",
+    "es": "de escaneo"
+  },
+  "test_q8_q7_a2_text": {
+    "en": "tracking",
+    "ru": "отслеживающие",
+    "es": "de seguimiento"
+  },
+  "test_q8_q7_a3_text": {
+    "en": "matrix",
+    "ru": "матричные",
+    "es": "matriciales"
+  },
+  "test_q8_q8_text": {
+    "en": "What situations are identified in scanning contour extraction algorithms? ",
+    "ru": "Какие ситуации выделяют при сканирующем алгоритме выделения контуров? ",
+    "es": "¿Qué situaciones se identifican en el algoritmo de escaneo para la extracción de contornos? "
+  },
+  "test_q8_q8_a1_text": {
+    "en": "start, continuation, split, merge, end ",
+    "ru": "начало, продолжение, разделение, слияние, конец ",
+    "es": "inicio, continuación, división, fusión, fin "
+  },
+  "test_q8_q8_a2_text": {
+    "en": "start, continuation, branching, addition, completion",
+    "ru": "начало, продолжение, ветвление, сложение, завершение",
+    "es": "inicio, continuación, ramificación, suma, terminación"
+  },
+  "test_q8_q8_a3_text": {
+    "en": "start, continuation, branching, merge, end ",
+    "ru": "начало, продолжение, ветвление, слияние, конец ",
+    "es": "inicio, continuación, ramificación, fusión, fin "
+  },
+  "test_q8_q9_text": {
+    "en": "What is this formula used for? ",
+    "ru": "Для чего используется данная формула? ",
+    "es": "¿Para qué se utiliza esta fórmula? "
+  },
+  "test_q8_q9_a1_text": {
+    "en": "for finding the sum of brightnesses ",
+    "ru": "для нахождения суммы яркостей ",
+    "es": "para hallar la suma de los brillos "
+  },
+  "test_q8_q9_a2_text": {
+    "en": "for finding distances between histograms ",
+    "ru": "для нахождения расстояний между гистограммами ",
+    "es": "para hallar las distancias entre histogramas "
+  },
+  "test_q8_q9_a3_text": {
+    "en": "for image filtering ",
+    "ru": "для фильтрации изображения ",
+    "es": "para el filtrado de imágenes "
+  },
+  "test_q8_q10_text": {
+    "en": "Which method refers to describing color textures? ",
+    "ru": "Какой метод относится к описанию цветовых текстур? ",
+    "es": "¿Qué método se refiere a la descripción de texturas de color? "
+  },
+  "test_q8_q10_a1_text": {
+    "en": "LBP histogram method ",
+    "ru": "метод LBP гистограмм ",
+    "es": "método de histogramas LBP "
+  },
+  "test_q8_q10_a2_text": {
+    "en": "40% method ",
+    "ru": "метод 40% ",
+    "es": "método del 40% "
+  },
+  "test_q8_q10_a3_text": {
+    "en": "based on adjacency matrix ",
+    "ru": "основанный на матрице смежности ",
+    "es": "basado en la matriz de adyacencia "
+  },
+  "test_q9_q1_text": {
+    "en": "What is the transformation of an image into a thin, single-pixel one called? ",
+    "ru": "Как называется преобразование изображения в тонкое, однопиксельное? ",
+    "es": "¿Cómo se llama la transformación de una imagen a una fina de un solo píxel? "
+  },
+  "test_q9_q1_a1_text": {
+    "en": "segmentation",
+    "ru": "сегментация",
+    "es": "segmentación"
+  },
+  "test_q9_q1_a2_text": {
+    "en": "thinning",
+    "ru": "утоньшение",
+    "es": "adelgazamiento"
+  },
+  "test_q9_q1_a3_text": {
+    "en": "filtering",
+    "ru": "фильтрация",
+    "es": "filtrado"
+  },
+  "test_q9_q2_text": {
+    "en": "What is this matrix called? ",
+    "ru": "Как называется данная матрица? ",
+    "es": "¿Cómo se llama esta matriz? "
+  },
+  "test_q9_q2_a1_text": {
+    "en": "neighborhood matrix of pixel P1 ",
+    "ru": "матрица окрестности пикселя Р1 ",
+    "es": "matriz de vecindad del píxel P1 "
+  },
+  "test_q9_q2_a2_text": {
+    "en": "adjacency matrix ",
+    "ru": "матрица смежности ",
+    "es": "matriz de adyacencia"
+  },
+  "test_q9_q2_a3_text": {
+    "en": "mask",
+    "ru": "маска",
+    "es": "máscara"
+  },
+  "test_q9_q3_text": {
+    "en": "What does A(P1) mean in this system (Zhang-Suen method)?",
+    "ru": "Что означает A(P1) в данной системе (метод Зонга-Суня)?",
+    "es": "¿Qué significa A(P1) en este sistema (método de Zhang-Suen)?"
+  },
+  "test_q9_q3_a1_text": {
+    "en": "sum of black pixels (quantity) in A8 ",
+    "ru": "сумма чёрных пикселей (количество) в А8 ",
+    "es": "suma de píxeles negros (cantidad) en A8 "
+  },
+  "test_q9_q3_a2_text": {
+    "en": "number of configurations 0-1 (transitions from black pixel to white) ",
+    "ru": "число конфигураций 0-1 (переходов с черного пикселя на белый) ",
+    "es": "número de configuraciones 0-1 (transiciones de píxel negro a blanco) "
+  },
+  "test_q9_q3_a3_text": {
+    "en": "sum of black pixels (quantity) in A4 ",
+    "ru": "сумма чёрных пикселей (количество) в А4 ",
+    "es": "suma de píxeles negros (cantidad) en A4 "
+  },
+  "test_q9_q4_text": {
+    "en": "What does B(P1) mean in this system (Zhang-Suen method)? ",
+    "ru": "Что означает В(P1) в данной системе (метод Зонга-Суня)? ",
+    "es": "¿Qué significa B(P1) en este sistema (método de Zhang-Suen)? "
+  },
+  "test_q9_q4_a1_text": {
+    "en": "sum of black pixels (quantity) in A8 ",
+    "ru": "сумма чёрных пикселей (количество) в А8 ",
+    "es": "suma de píxeles negros (cantidad) en A8 "
+  },
+  "test_q9_q4_a2_text": {
+    "en": "number of configurations 0-1 (transitions from black pixel to white) ",
+    "ru": "число конфигураций 0-1 (переходов с черного пикселя на белый) ",
+    "es": "número de configuraciones 0-1 (transiciones de píxel negro a blanco) "
+  },
+  "test_q9_q4_a3_text": {
+    "en": "sum of black pixels (quantity) in A4",
+    "ru": "сумма чёрных пикселей (количество) в А4",
+    "es": "suma de píxeles negros (cantidad) en A4"
+  },
+  "test_q9_q5_text": {
+    "en": "How long does the Zhang-Suen thinning algorithm continue?",
+    "ru": "До каких пор продолжается алгоритм утоньшения Зонга-Суня?",
+    "es": "¿Hasta cuándo continúa el algoritmo de adelgazamiento de Zhang-Suen?"
+  },
+  "test_q9_q5_a1_text": {
+    "en": "after four stages of pixel removal ",
+    "ru": "после четырёх этапов удаления пикселей ",
+    "es": "después de cuatro etapas de eliminación de píxeles "
+  },
+  "test_q9_q5_a2_text": {
+    "en": "after two stages of pixel removal ",
+    "ru": "после двух этапов удаления пикселей ",
+    "es": "después de dos etapas de eliminación de píxeles "
+  },
+  "test_q9_q5_a3_text": {
+    "en": "until «non-removable» pixels remain in the image ",
+    "ru": "до тех пор, пока на изображении не останутся «не удаляемые» пиксели ",
+    "es": "hasta que no queden en la imagen píxeles «no eliminables» "
+  },
+  "test_q9_q6_text": {
+    "en": "What is an arc point? ",
+    "ru": "Что такое точка дуги? ",
+    "es": "¿Qué es un punto de arco? "
+  },
+  "test_q9_q6_a1_text": {
+    "en": "a pixel that has only two neighbors located with a gap between them",
+    "ru": "пиксель, у которого только два соседа, расположенные с промежутком между ними",
+    "es": "un píxel que tiene solo dos vecinos situados con un espacio entre ellos"
+  },
+  "test_q9_q6_a2_text": {
+    "en": "a pixel that lacks at least one 4-neighbor ",
+    "ru": "пиксель, у которого отсутствует хотя бы один сосед по 4-связности ",
+    "es": "un píxel al que le falta al menos un vecino de 4-conectividad "
+  },
+  "test_q9_q6_a3_text": {
+    "en": "a pixel that lacks at least one 8-neighbor ",
+    "ru": "пиксель, у которого отсутствует хотя бы один сосед по 8-связности ",
+    "es": "un píxel al que le falta al menos un vecino de 8-conectividad "
+  },
+  "test_q9_q7_text": {
+    "en": "What is a border element? ",
+    "ru": "Что такое граничный элемент? ",
+    "es": "¿Qué es un elemento de borde? "
+  },
+  "test_q9_q7_a1_text": {
+    "en": "a pixel that has only two neighbors located with a gap between them ",
+    "ru": "пиксель, у которого только два соседа, расположенные с промежутком между ними ",
+    "es": "un píxel que tiene solo dos vecinos situados con un espacio entre ellos "
+  },
+  "test_q9_q7_a2_text": {
+    "en": "a pixel that lacks at least one 4-neighbor ",
+    "ru": "пиксель, у которого отсутствует хотя бы один сосед по 4-связности ",
+    "es": "un píxel al que le falta al menos un vecino de 4-conectividad "
+  },
+  "test_q9_q7_a3_text": {
+    "en": "a pixel that lacks at least one 8-neighbor ",
+    "ru": "пиксель, у которого отсутствует хотя бы один сосед по 8-связности ",
+    "es": "un píxel al que le falta al menos un vecino de 8-conectividad "
+  },
+  "test_q9_q8_text": {
+    "en": "Is it true that a terminal border element is a pixel that has 4-connectivity with only one of its neighbors?",
+    "ru": "Верно ли, что концевой граничный элемент – это пиксель, который обладает 4-связностью только лишь с одним своим соседом?",
+    "es": "¿Es cierta la afirmación de que un elemento de borde terminal es un píxel que posee 4-conectividad con solo uno de sus vecinos?"
+  },
+  "test_q9_q8_a1_text": {
+    "en": "yes",
+    "ru": "да",
+    "es": "sí"
+  },
+  "test_q9_q8_a2_text": {
+    "en": "no",
+    "ru": "нет",
+    "es": "no"
+  },
+  "test_q9_q8_a3_text": {
+    "en": "don't know ",
+    "ru": "не знаю ",
+    "es": "no lo sé "
+  },
+  "test_q9_q9_text": {
+    "en": "Which method belongs to thinning methods? ",
+    "ru": "Какой метод относится к методам утоньшения? ",
+    "es": "¿Qué método pertenece a los métodos de adelgazamiento? "
+  },
+  "test_q9_q9_a1_text": {
+    "en": "Prewitt method ",
+    "ru": "метод Превитта ",
+    "es": "método de Prewitt "
+  },
+  "test_q9_q9_a2_text": {
+    "en": "Zhang-Suen method ",
+    "ru": "метод Зонга-Суня ",
+    "es": "метод Зонга-Суня "
+  },
+  "test_q9_q9_a3_text": {
+    "en": "40% method ",
+    "ru": "метод 40% ",
+    "es": "método del 40% "
+  },
+  "test_q9_q10_text": {
+    "en": "In what order are border elements scanned in the LRTB thinning method? ",
+    "ru": "В каком порядке просматриваются граничные элементы утоньшении методом LRTB? ",
+    "es": "¿En qué orden se revisan los elementos de borde en el método de adelgazamiento LRTB? "
+  },
+  "test_q9_q10_a1_text": {
+    "en": "left, right, bottom, top",
+    "ru": "слева, справа, снизу, сверху",
+    "es": "izquierda, derecha, abajo, arriba"
+  },
+  "test_q9_q10_a2_text": {
+    "en": "top, bottom, right, left ",
+    "ru": "сверху, снизу, справа, слева ",
+    "es": "arriba, abajo, derecha, izquierda "
+  },
+  "test_q9_q10_a3_text": {
+    "en": "left, right, top, bottom ",
+    "ru": "слева, справа, сверху, снизу ",
+    "es": "izquierda, derecha, arriba, abajo "
   }
-  
-  
-  
 }

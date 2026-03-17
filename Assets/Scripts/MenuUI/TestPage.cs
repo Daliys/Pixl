@@ -4,6 +4,7 @@ using ScriptableObjects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Localization;
 
 namespace MenuUI
 {
@@ -29,28 +30,28 @@ namespace MenuUI
         [SerializeField] private TextMeshProUGUI resultCorrectText;
         [SerializeField] private TextMeshProUGUI resultWrongText;
 
-        private int correctAnswers; 
-        private int wrongAnswers; 
+        private int _correctAnswers; 
+        private int _wrongAnswers; 
         
-        private QuestionsDataList questionsDataList;
-        private QuestionData[] randomSortedQuestions;
-        private int currentIndex;
+        private QuestionsDataList _questionsDataList;
+        private QuestionData[] _randomSortedQuestions;
+        private int _currentIndex;
 
-        private bool isTestFinished;
+        private bool _isTestFinished;
 
         public void Initialize(QuestionsDataList questionsDataList)
         {
-            this.questionsDataList = questionsDataList;
+            _questionsDataList = questionsDataList;
             
             List<QuestionData> temp = new List<QuestionData>();
-            temp.AddRange(this.questionsDataList.questions);
+            temp.AddRange(_questionsDataList.questions);
 
-            randomSortedQuestions = new QuestionData[temp.Count];
+            _randomSortedQuestions = new QuestionData[temp.Count];
             
-            for (int i = 0; i < randomSortedQuestions.Length; i++)
+            for (int i = 0; i < _randomSortedQuestions.Length; i++)
             {
                 int randomIndex = Random.Range(0, temp.Count);
-                randomSortedQuestions[i] = temp[randomIndex];
+                _randomSortedQuestions[i] = temp[randomIndex];
                 temp.RemoveAt(randomIndex);
             }
             
@@ -58,29 +59,30 @@ namespace MenuUI
             button2.Initialize(OnButtonClicked);
             button3.Initialize(OnButtonClicked);
             nextButton.SetActive(false);
-            currentIndex = 0;
-            correctAnswers = 0;
-            wrongAnswers = 0;
-            isTestFinished = false;
+            _currentIndex = 0;
+            _correctAnswers = 0;
+            _wrongAnswers = 0;
+            _isTestFinished = false;
             
             resultPanel.gameObject.SetActive(false);
             nextButton.SetActive(false);
             ResetButtons();
-            InitializeQuestion(randomSortedQuestions[currentIndex]);
+            InitializeQuestion(_randomSortedQuestions[_currentIndex]);
         }
 
         private void InitializeQuestion(QuestionData questionData)
         {
-            currentIndexText.text = (currentIndex+1).ToString("D2");
-            totalIndexText.text = "/ " + randomSortedQuestions.Length;
+            currentIndexText.text = (_currentIndex + 1).ToString("D2");
+            totalIndexText.text = "/ " + _randomSortedQuestions.Length;
 
-            if (string.IsNullOrEmpty(questionData.questionText)) questionText.gameObject.SetActive(false);
+            if (questionData.questionText == null || string.IsNullOrEmpty(questionData.questionText.value))
+                questionText.gameObject.SetActive(false);
             else
             {
                 questionText.gameObject.SetActive(true);
-                questionText.text = questionData.questionText;
+                questionText.text = LocalizationManager.GetLocalizationValue(questionData.questionText.value);
             }
-            
+
             if (questionData.questionImage == null) questionImage.gameObject.SetActive(false);
             else
             {
@@ -89,30 +91,46 @@ namespace MenuUI
                 questionImage.preserveAspect = true;
             }
 
-            
-            if (questionData.answerOptions[0].answerImage == null) button1.SetButtonValue(questionData.answerOptions[0].answerText);
-            else button1.SetButtonValue(questionData.answerOptions[0].answerImage);
-            
-            if (questionData.answerOptions[1].answerImage == null) button2.SetButtonValue(questionData.answerOptions[1].answerText);
-            else button2.SetButtonValue(questionData.answerOptions[1].answerImage);
-            
-            if (questionData.answerOptions[2].answerImage == null) button3.SetButtonValue(questionData.answerOptions[2].answerText);
-            else button3.SetButtonValue(questionData.answerOptions[2].answerImage);
+            InitializeAnswerButton(button1, questionData.answerOptions, 0);
+            InitializeAnswerButton(button2, questionData.answerOptions, 1);
+            InitializeAnswerButton(button3, questionData.answerOptions, 2);
+        }
+
+        private void InitializeAnswerButton(TestAnswerButton button, AnswerOption[] options, int index)
+        {
+            if (options != null && index < options.Length)
+            {
+                button.gameObject.SetActive(true);
+                AnswerOption option = options[index];
+                if (option.answerImage == null)
+                {
+                    string locKey = (option.answerText != null) ? option.answerText.value : string.Empty;
+                    button.SetButtonValue(LocalizationManager.GetLocalizationValue(locKey));
+                }
+                else
+                {
+                    button.SetButtonValue(option.answerImage);
+                }
+            }
+            else
+            {
+                button.gameObject.SetActive(false);
+            }
         }
 
         private void OnButtonClicked(int index)
         {
-            int correctIndex = randomSortedQuestions[currentIndex].correctAnswerIndex;
+            int correctIndex = _randomSortedQuestions[_currentIndex].correctAnswerIndex;
             if (correctIndex == index)
             {
                 GetButton(index).gameObject.GetComponent<Image>().color = correctButtonColor;
-                correctAnswers++;
+                _correctAnswers++;
             }
             else
             {
                 GetButton(index).gameObject.GetComponent<Image>().color = wrongButtonColor;
                 GetButton(correctIndex).gameObject.GetComponent<Image>().color = correctButtonColor;
-                wrongAnswers++;
+                _wrongAnswers++;
             }
             
             button1.gameObject.GetComponent<Button>().enabled = false;
@@ -120,30 +138,32 @@ namespace MenuUI
             button3.gameObject.GetComponent<Button>().enabled = false;
             nextButton.SetActive(true);
 
-            nextButtonText.text = (currentIndex+1) != randomSortedQuestions.Length ? "следующий вопрос" : "результат";
+            nextButtonText.text = (_currentIndex + 1) != _randomSortedQuestions.Length
+                ? LocalizationManager.GetLocalizationValue(LocalizationsIds.TestNextQuestion.value)
+                : LocalizationManager.GetLocalizationValue(LocalizationsIds.TestResult.value);
         }
 
         public void OnButtonNextClicked()
         {
 
-            if (isTestFinished)
+            if (_isTestFinished)
             {
-                Initialize(questionsDataList);
+                Initialize(_questionsDataList);
                 return;
             }
             
-            if (currentIndex + 1 == randomSortedQuestions.Length)
+            if (_currentIndex + 1 == _randomSortedQuestions.Length)
             {
                 resultPanel.gameObject.SetActive(true);
-                resultCorrectText.text = correctAnswers.ToString();
-                resultWrongText.text = wrongAnswers.ToString();
-                nextButtonText.text = "повторить тест";
-                isTestFinished = true;
+                resultCorrectText.text = _correctAnswers.ToString();
+                resultWrongText.text = _wrongAnswers.ToString();
+                nextButtonText.text = LocalizationManager.GetLocalizationValue(LocalizationsIds.TestRepeat.value);
+                _isTestFinished = true;
                 return;
             }
             
-            currentIndex++;
-            InitializeQuestion(randomSortedQuestions[currentIndex]);
+            _currentIndex++;
+            InitializeQuestion(_randomSortedQuestions[_currentIndex]);
             ResetButtons();
             nextButton.SetActive(false);
         }
