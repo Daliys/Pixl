@@ -70,3 +70,12 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# AI and MCP Bridge Files
+.gemini/
+GEMINI.md
+DOCUMENTATION.md
+API_REFERENCE.MD
+NEXUS_UNITY_DOCS.md
+nexus_unity_bridge.py
+mono_crash.*.json
