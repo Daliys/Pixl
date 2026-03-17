@@ -74,7 +74,7 @@ crashlytics-build.properties
 # AI and MCP Bridge Files
 .gemini/
 GEMINI.md
-DOCUMENTATION.md
+DOCUMENTATION.MD
 API_REFERENCE.MD
 NEXUS_UNITY_DOCS.md
 nexus_unity_bridge.py
