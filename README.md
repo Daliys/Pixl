@@ -1,5 +1,6 @@
 # Pixl - Image Processing Algorithms Educational Trainer
 
+> Commissioned educational app, built solo in Unity for a client's university project (2023).
 
 ## 📌 About the Project
 
@@ -7,7 +8,7 @@
 
 **Pixl** is an interactive educational puzzle game developed in Unity, designed to teach and demonstrate the core concepts, methods, and algorithms of digital image processing. By combining theoretical knowledge with hands-on, grid-based puzzle mechanics and testing modules, the application serves as a comprehensive trainer for students and enthusiasts alike.
 
-This project was originally developed in **2023** as a diploma work for **BNTU (Belarusian National Technical University)**. The recent updates were focused exclusively on final maintenance, UI polishing, and expanded localization to prepare the repository for its final, archived state. The core legacy logic and architecture from 2023 remain preserved to showcase the project's original technical foundations.
+This project was originally developed in **2023** as a commissioned app: I designed and built it solo in Unity for a client's university project. The recent updates were focused exclusively on final maintenance, UI polishing, and expanded localization to prepare the repository for its final, archived state. The core legacy logic and architecture from 2023 remain preserved to showcase the project's original technical foundations.
 
 
 ## ✨ Features
@@ -53,7 +54,7 @@ The UI, theoretical content, and over 90+ test questions and answers dynamically
 
 ## 📦 Project Structure & Legacy Context
 
-As a preserved 2023 diploma project, the architecture reflects the conventions of its time. 
+As a preserved 2023 project, the architecture reflects the conventions of its time. 
 *   **`Assets/Scripts/Grid/`**: Core implementation of the puzzle grid and procedural generation (`LevelBase`, `LevelGenerator`).
 *   **`Assets/Scripts/Localization/`**: Custom JSON-based dictionary and `LocalizationsIds` manager.
 *   **`Assets/ScriptableObjects/`**: Heavily utilizes Unity's ScriptableObjects for isolated, manageable content data.
@@ -68,4 +69,4 @@ As a preserved 2023 diploma project, the architecture reflects the conventions o
 This project is considered **Feature Complete** and is currently **Archived**. It stands as a functional educational tool and a portfolio piece demonstrating proficiency in Unity UI, ScriptableObject architecture, and algorithm visualization.
 
 ---
-*Developed for the discipline "Methods and algorithms of image processing" at BNTU.*
+*Built as a trainer for the university course "Methods and algorithms of image processing".*
